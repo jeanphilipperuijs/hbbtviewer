@@ -1,0 +1,35 @@
+{
+	"label" : "HbbTV",
+	"icon": "chrome://firetv-profile/content/hbbtv/hbbtv-logo.png",
+	"resolution" : { "width":1280, "height":720 },
+	"defaultTVFormat" : "16:9",
+	"margins" : { "left":64, "top":36, "right":64, "bottom":36 },
+	"fonts" : {
+		"definitions" : [
+			{"font-family" : "Letter Gothic 12 Pitch", "src" : "chrome://firetv-fonts/content/LetterGothic12Pitch/lettergothic.ttf"},
+			{"font-family" : "Tiresias", "src" : "chrome://firetv-fonts/content/Tiresias/tiresias-screenfont.ttf"}
+		],
+		"standards" : { 
+			"serif" : "Tiresias",
+			"sans-serif" : "Tiresias",
+			"monospace" : "Letter Gothic 12 Pitch"
+		}
+	},
+	"cssReplacements" : [
+		{
+			"property" : "position",
+			"value" : "fixed",
+			"replacement": "absolute" 
+		}
+	],
+	"cssOverloads" : {
+		"nav-css": {
+			"properties" : [ "nav-left", "nav-right", "nav-up", "nav-down"],
+			"hook" : "css-nav.js" 
+		}
+	},
+	"userAgent": "HbbTV/1.1.1 (;;;;;)",
+	"stylesheets" : [ "profile.css" ],
+	"scripts" : [ "env/debug.js", "env/keys.js", "env/oipf.js", "env/broadcast.js", "env/events.js", "env/av.js"],
+    "remote"  : "remote.js"
+}

@@ -1,0 +1,13 @@
+/* See license.txt for terms of usage */
+
+body,table {
+	font-family: Tiresias;
+	font-size:15px;
+	line-height:1.4;
+	
+}
+
+object[type="video/broadcast"] {
+  /*background-color: #000000;*/
+  -moz-binding: url(chrome://firetv-profile/content/hbbtv/bindings.xml#video);
+}

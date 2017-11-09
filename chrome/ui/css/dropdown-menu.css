@@ -1,0 +1,66 @@
+/* See license.txt for terms of usage */
+
+/* dropdown menu */
+.firetv-custom-select {
+	position:relative !important;
+	top: 2px !important;
+	margin-right:5px !important;
+	width: auto !important;
+}
+
+.firetv-custom-select .firetv-dropdown-menu {
+	height: 25px !important;
+	-moz-appearance: none !important;
+	-moz-box-sizing: border-box !important;
+	cursor: pointer !important;
+	-moz-binding:
+		url(chrome://firetv-ui/content/bindings/bindings.xml#firetv-dropdown-menu)
+		!important;
+	width: auto !important;
+	position: static !important;
+	display: inline-block !important;
+	border: 1px solid #bbb !important;
+	padding: 4px 22px 3px 5px !important;
+	margin: 0 !important;
+	font-weight: normal !important;
+	color: #fff !important;
+	outline: none !important; /* remove focus ring from Webkit */
+	line-height: 25px !important;
+	background: rgba(248,248,248,0.3) !important;
+	border-radius: 6px !important;
+}
+
+.firetv-custom-select option{
+	padding: 4px 3px 3px 5px !important;
+}
+.firetv-custom-select .firetv-dropdown-menu:hover {
+	box-shadow: 0 0 3px 1px #EEE !important;
+	transition: box-shadow .3s ease-in !important;
+}
+
+label.firetv-custom-select {
+	position: relative !important;
+	display: inline-block !important;
+	height: 25px !important;
+}
+
+.firetv-custom-select:after {
+	content: "▼" !important;
+	position: absolute !important;
+	width: 10px !important;
+	top: 0 !important;
+	right: 0 !important;
+	bottom: 0 !important;
+	font-size: 60% !important;
+	line-height: 25px !important;
+	padding: 0 7px !important;
+	background: rgb(187,187,187) !important;
+	color: white !important;
+	pointer-events: none !important;
+	border-radius: 0 6px 6px 0 !important;
+}
+
+.firetv-custom-select .firetv-dropdown-menu option {
+	font-weight: normal !important;
+	color: #444 !important;
+}

@@ -1,0 +1,90 @@
+/* See license.txt for terms of usage */
+
+[anonid=firetv-menu-bar] {
+	-moz-user-select: -moz-none !important;
+	position: absolute !important;
+	top: 0px !important;
+	right: 5px !important;
+	left:5px !important;
+	height:36px !important;
+	line-height: 0px !important;
+	vertical-align:middle !important;
+	text-align: left !important;
+	padding : 0 0 0 10px !important;
+	
+	font-family: sans-serif !important;
+	font-size: 0px !important;
+	background-color: transparent !important;
+	background-image: linear-gradient(rgba(255, 255, 255, 0.5), transparent), url(chrome://firetv-images/content/background.svg) !important;
+	background-position: 0 0, -5px 0; 
+	border-radius : 0 0 10px 10px !important;
+	border-width: 0 !important;
+	box-shadow: 0 0 5px #BABABA !important;
+	text-shadow: none !important;
+	overflow: visible !important;
+	visibility: visible !important;
+	z-index: 2000000005 !important;
+}
+
+
+[anonid=firetv-menu-bar] * {
+	font-family: Arial, sans-serif !important;
+	letter-spacing: normal !important;
+	font-size: 11px !important;
+	opacity: 1 !important;
+	background-color: transparent !important;
+	border-width: 0 !important;
+	text-shadow: none !important;
+	vertical-align: baseline !important;
+}
+
+[anonid=firetv-menu-bar] div, [anonid=firetv-menu-bar] select, [anonid=firetv-menu-bar] button {
+	display:inline-block !important;
+}
+
+[anonid=firetv-rc-popup-button]{
+	float: right !important;
+	margin: 5px 10px 0px 0px !important;
+}
+[anonid=firetv-dsmcc-button]{
+	float: right !important;
+	margin: 5px 5px 0px 0px !important;
+}
+[anonid=firetv-ua-button]{
+	float: right !important;
+	margin: 5px 5px 0px 0px !important;
+}
+
+.firetv-widget[anonid=firetv-dsmcc-widget]{
+	width: 330px !important;
+}
+.firetv-widget[anonid=firetv-user-agent-widget]{
+	width: 640px !important;
+}
+
+.firetv-widget-forminput[anonid=firetv-user-agent-input]{
+	width: 555px !important;
+}
+
+.firetv-toggle-button[anonid=firetv-tvimage-display-toggle] {
+	/*border-right-width: 0 !important;*/
+	border-top-right-radius: 0 !important;
+	border-bottom-right-radius: 0 !important;
+	position: relative !important;
+	margin-right:0 !important;
+}
+.firetv-image-button[anonid=firetv-tvimage-upload]{
+	border-top-left-radius: 0 !important;
+	border-bottom-left-radius: 0 !important;
+	position: relative !important;
+ 	left:-1px !important; 
+}
+
+html[firetv-fullscreen="false"] [anonid=firetv-menu-bar] {
+	opacity: 1 !important;
+	transition: opacity 0.6s ease-in !important;
+}
+html[firetv-fullscreen="true"] [anonid=firetv-menu-bar] {
+	opacity: 0 !important;
+	transition: opacity 0.6s ease-in !important;
+}

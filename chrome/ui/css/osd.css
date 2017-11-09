@@ -1,0 +1,14 @@
+#firetv-osd-message {
+	background-image: linear-gradient(rgba(255, 255, 255, 0.5), transparent), url(chrome://firetv-images/content/background.svg) !important;
+	background-repeat: repeat !important;
+	position: absolute !important;
+	top: 50px !important;
+	left: 50px !important; 
+	padding: 20px !important;
+	border-radius: 10px !important;
+	border: 1px solid rgba(240,240,240,0.5) !important;
+	opacity: 0.7 !important;
+	font-family: FireTV, sans-serif !important; 
+	color: #FFFFFF !important; 
+	font-size: 35px !important
+}

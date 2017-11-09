@@ -1,0 +1,29 @@
+/* See license.txt for terms of usage */
+
+[anonid=firetv-other-infos]{
+	-moz-user-select: -moz-none !important;
+	position: absolute !important;
+	top: 36px !important;
+	left: 10px !important;
+	height:15px !important;
+	display:inline-block !important;
+	line-height: 15px !important;
+	font-size:11px !important;
+	font-weight: normal !important;
+	color: #FAFAFA !important;
+	text-align:left !important;
+	font-family: monospace !important;
+	background-color: transparent !important;
+	visibility: visible !important;
+	border-width: 0 !important;
+}
+
+html[firetv-fullscreen="false"] [anonid=firetv-other-infos] {
+	opacity: 1 !important;
+	transition: opacity 0.6s ease-in !important;
+}
+
+html[firetv-fullscreen="true"] [anonid=firetv-other-infos] {
+	opacity: 0 !important;
+	transition: opacity 0.6s ease-in !important;
+}

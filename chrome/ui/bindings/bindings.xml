@@ -1,0 +1,950 @@
+<?xml version="1.0"?>
+<!-- See license.txt for terms of usage  -->
+<bindings xmlns="http://www.mozilla.org/xbl" xmlns:xbl="http://www.mozilla.org/xbl"
+	xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+
+	<binding id="firetv-overlay" bindToUntrustedContent="true">
+		<resources>
+			<stylesheet src="chrome://firetv-ui/content/css/additional-infos.css" />
+			<stylesheet src="chrome://firetv-ui/content/css/stream-infos.css" />
+			<stylesheet src="chrome://firetv-ui/content/css/other-infos.css" />
+			<stylesheet src="chrome://firetv-ui/content/css/menu-bar.css" />
+			<stylesheet src="chrome://firetv-ui/content/css/dropdown-menu.css" />
+			<stylesheet src="chrome://firetv-ui/content/css/toggle-button.css" />
+			<stylesheet src="chrome://firetv-ui/content/css/image-button.css" />
+			<stylesheet src="chrome://firetv-ui/content/css/popup.css" />
+			<stylesheet src="chrome://firetv-ui/content/css/ime.css" />
+			<stylesheet src="chrome://firetv-ui/content/css/remote-control.css" />
+			<stylesheet src="chrome://firetv-ui/content/css/widget.css" />
+			<stylesheet src="chrome://firetv-ui/content/css/osd.css" />
+		</resources>
+		<content>
+			<children />
+			<html:div anonid="firetv-menu-bar">
+				<html:label class="firetv-custom-select firetv-widget-label"><html:select anonid="firetv-profile-chooser" class="firetv-dropdown-menu" tabindex="-1"></html:select></html:label>
+				<html:label class="firetv-custom-select firetv-widget-label"><html:select anonid="firetv-scaling-chooser" class="firetv-dropdown-menu" tabindex="-1"></html:select></html:label>
+				<html:label class="firetv-custom-select firetv-widget-label"><html:select anonid="firetv-tv-format-chooser" class="firetv-dropdown-menu" tabindex="-1"></html:select></html:label>
+				<html:button anonid="firetv-margin-display-toggle" class="firetv-toggle-button" tabindex="-1"></html:button>
+				<html:button anonid="firetv-tvimage-display-toggle" class="firetv-toggle-button" tabindex="-1"></html:button>
+				
+				<html:button tabindex="-1" anonid="firetv-tvimage-upload" class="firetv-image-button" firetv-bridge-callback="chooseTVImage" firetv-icon="chrome://firetv-images/content/newtab.png"></html:button>
+				<html:label class="firetv-custom-select firetv-widget-label"><html:select anonid="firetv-tv-channel-chooser" class="firetv-dropdown-menu" tabindex="-1"></html:select></html:label>
+				<html:label class="firetv-custom-select firetv-widget-label"><html:select anonid="firetv-broadcastplayer-chooser" class="firetv-dropdown-menu" tabindex="-1"></html:select></html:label>
+				<html:label class="firetv-custom-select firetv-widget-label"><html:select anonid="firetv-mediaplayer-chooser" class="firetv-dropdown-menu" tabindex="-1"></html:select></html:label>
+
+				<html:button anonid="firetv-rc-popup-button" class="firetv-popup-button" tabindex="-1"
+					popup-anonid="firetv-remote-control"></html:button>
+				<html:button anonid="firetv-ua-button" class="firetv-widget-button" tabindex="-1"
+					attr="user-agent-controls" widget-anonid="firetv-user-agent-widget" widget-button-label-id="firetv.userAgent.toggleButton.label"></html:button>
+				<html:button anonid="firetv-dsmcc-button" class="firetv-widget-button" tabindex="-1"
+					attr="dsmcc-controls" widget-anonid="firetv-dsmcc-widget" widget-button-label-id="firetv.streamEvents.toggleButton.label"></html:button>	
+			</html:div>
+			<html:div anonid="firetv-additional-infos" id="firetv-additional-infos">
+				<html:div anonid="firetv-stream-infos" id="firetv-stream-infos">
+					<html:span anonid="firetv-stream-infos-channel" id="firetv-stream-infos-channel" class="firetv-span"></html:span>
+					<html:input anonid="firetv-stream-infos-input" id="firetv-stream-infos-input" class="firetv-input" tabindex="-1" type="text" placeholder="Stream URL"></html:input>
+					<html:span anonid="firetv-stream-infos-tester" id="firetv-stream-infos-tester" class="firetv-tester" type="text"></html:span>
+				</html:div>
+			</html:div>
+			<html:div anonid="firetv-other-infos" id="firetv-other-infos">
+			</html:div>
+			<html:div anonid="firetv-remote-control" class="firetv-popup"></html:div>
+			<html:div anonid="firetv-input-ime" class="firetv-popup-noautohide"></html:div>
+			<html:div anonid="firetv-widgets" class="firetv-widgets">
+				<html:div anonid="firetv-user-agent-widget" firetv-title="" class="firetv-widget">
+					<html:div class="firetv-widget-section">
+						<html:span anonid="firetv-user-agent-section-title">User-Agent</html:span>
+<!-- 						<html:button anonid="firetv-user-agent-button" class="firetv-widget-formbutton" tabindex="-1" onclick="document.documentElement._firetvUpdateUserAgent(event)"></html:button> -->
+						<html:button anonid="firetv-user-agent-button-reset" class="firetv-widget-formbutton" tabindex="-1" onclick="document.documentElement._firetvResetUserAgent(event)"></html:button>
+					</html:div>
+					<html:div class="firetv-widget-formsection">
+						<html:label anonid="firetv-user-agent-label" class="firetv-widget-label"></html:label>
+						<html:input anonid="firetv-user-agent-input" onkeypress="document.documentElement._firetvUpdateUserAgent()" class="firetv-widget-forminput" maxlength="255" type="text" tabindex="-1"></html:input>
+					</html:div>
+					<html:div class="firetv-widget-formsection">
+						<html:input anonid="firetv-user-agent-checkbox" onclick="document.documentElement._firetvUpdateUserAgent()" id="firetv-user-agent-checkbox" class="firetv-widget-formcheckbox" type="checkbox" tabindex="-1"></html:input>
+						<html:label for="firetv-user-agent-checkbox" anonid="firetv-user-agent-suffix" style="padding-left:10px"></html:label>
+					</html:div>
+				</html:div>
+				<html:div anonid="firetv-dsmcc-widget" firetv-title="" class="firetv-widget">
+					<html:div class="firetv-widget-section">
+						<html:span anonid="firetv-dsmcc-section-title"></html:span>
+						<html:button anonid="firetv-dsmcc-trigger-button" class="firetv-widget-formbutton" tabindex="-1" onclick="document.documentElement._firetvTriggerStreamEvent(event)"></html:button>
+					</html:div>
+					<html:div class="firetv-widget-formsection">
+						<html:label anonid="firetv-dsmcc-label-name" class="firetv-widget-label"></html:label>
+						<html:input anonid="firetv-last-triggered-streamevent-name" class="firetv-widget-forminput" maxlength="255" type="text" tabindex="-1"></html:input> 
+					</html:div>
+					<html:div class="firetv-widget-formsection">
+						<html:label anonid="firetv-dsmcc-label-data" class="firetv-widget-label"></html:label>
+						<html:input anonid="firetv-last-triggered-streamevent-data" class="firetv-widget-forminput" maxlength="255" type="text" tabindex="-1"></html:input>
+					</html:div>
+				</html:div>
+			</html:div>
+			<html:div id="firetv-osd" anonid="firetv-osd" style="z-index: 2000000002 !important; pointer-events: none !important; position: absolute !important; top: 50px !important; visibility:hidden;"><html:div id="firetv-osd-message"> - No signal -</html:div></html:div>
+		</content>
+		<implementation>
+			<method name="_firetvGetInstance">
+				<body>
+				<![CDATA[  
+					return window.wrappedJSObject.FireTVPlugin;
+				]]>
+				</body>
+			</method>
+			
+			<method name="_firetvTriggerStreamEvent">
+				<body>
+				<![CDATA[  
+					var FireTVPlugin = this._firetvGetInstance();
+					var bridge = FireTVPlugin.bridge;
+					
+					var nameAttr = "firetv-last-triggered-streamevent-name";
+					var dataAttr = "firetv-last-triggered-streamevent-data";
+					
+					var streamEventNameInput = document.getAnonymousElementByAttribute(document.documentElement, "anonid", nameAttr);
+					var streamEventDataInput = document.getAnonymousElementByAttribute(document.documentElement, "anonid", dataAttr);
+					
+					// -- save last triggered values
+					bridge.setStreamEventName(streamEventNameInput.value.trim());
+					bridge.setStreamEventData(streamEventDataInput.value);
+					
+					// -- trigger event
+					bridge.dispatchEvent({
+						type: "firetv-streamevent",
+						name: streamEventNameInput.value.trim(), 
+						value:streamEventDataInput.value
+					});
+				]]>
+				</body>
+			</method>
+			
+			<method name="_firetvInitStreamEventValues">
+				<body>
+				<![CDATA[
+					var FireTVPlugin = this._firetvGetInstance();
+					var bridge = FireTVPlugin.bridge;
+					
+					// -- init localized labels
+					var element = document.getAnonymousElementByAttribute(document.documentElement, "anonid", "firetv-dsmcc-section-title");
+					while(element.firstChild){
+						element.removeChild(element.firstChild);
+					}
+					element.appendChild(document.createTextNode(FireTVPlugin.messages["firetv.streamEvents.sectionTitle"]));
+				
+					element = document.getAnonymousElementByAttribute(document.documentElement, "anonid", "firetv-dsmcc-trigger-button");
+					while(element.firstChild){
+						element.removeChild(element.firstChild);
+					}
+					element.appendChild(document.createTextNode(FireTVPlugin.messages["firetv.streamEvents.triggerButton"]));
+				
+					element = document.getAnonymousElementByAttribute(document.documentElement, "anonid", "firetv-dsmcc-label-name");
+					while(element.firstChild){
+						element.removeChild(element.firstChild);
+					}
+					element.appendChild(document.createTextNode(FireTVPlugin.messages["firetv.streamEvents.nameLabel"]));
+					
+					element = document.getAnonymousElementByAttribute(document.documentElement, "anonid", "firetv-dsmcc-label-data");
+					while(element.firstChild){
+						element.removeChild(element.firstChild);
+					}
+					element.appendChild(document.createTextNode(FireTVPlugin.messages["firetv.streamEvents.dataLabel"]));
+				
+					// -- init values
+					var nameAttr = "firetv-last-triggered-streamevent-name";
+					var dataAttr = "firetv-last-triggered-streamevent-data";
+					
+					var streamEventNameInput = document.getAnonymousElementByAttribute(document.documentElement, "anonid", nameAttr);
+					var streamEventDataInput = document.getAnonymousElementByAttribute(document.documentElement, "anonid", dataAttr);
+					
+					streamEventNameInput.value = bridge.getStreamEventName();
+					streamEventDataInput.value = bridge.getStreamEventData();
+				]]>
+				</body>
+			</method>
+			<method name="_firetvInitUserAgentValue">
+				<body>
+				<![CDATA[
+					var FireTVPlugin = this._firetvGetInstance();
+					var bridge = FireTVPlugin.bridge;
+					
+					//firetv-user-agent-label
+					//firetv-user-agent-input
+					//firetv-user-agent-button
+					//firetv-user-agent-reset
+					
+					// -- init localized labels
+					var element = document.getAnonymousElementByAttribute(document.documentElement, "anonid", "firetv-user-agent-label");
+					while(element.firstChild){
+						element.removeChild(element.firstChild);
+					}
+					element.appendChild(document.createTextNode(FireTVPlugin.messages["firetv.userAgent.widget.label"]));
+					
+					element = document.getAnonymousElementByAttribute(document.documentElement, "anonid", "firetv-user-agent-button-reset");
+					while(element.firstChild){
+						element.removeChild(element.firstChild);
+					}
+					element.appendChild(document.createTextNode(FireTVPlugin.messages["firetv.userAgent.widget.button.reset"]));
+					
+					
+					element = document.getAnonymousElementByAttribute(document.documentElement, "anonid", "firetv-user-agent-checkbox");
+					element.checked = FireTVPlugin.bridge.isUserAgentSuffixEnabled();
+					
+					element = document.getAnonymousElementByAttribute(document.documentElement, "anonid", "firetv-user-agent-suffix");
+					while(element.firstChild){
+						element.removeChild(element.firstChild);
+					}
+					element.appendChild(document.createTextNode(FireTVPlugin.messages["firetv.userAgent.widget.suffix"] + " " + FireTVPlugin.constants.USERAGENT_SUFFIX + " " + FireTVPlugin.constants.VERSION));
+					
+					
+					element = document.getAnonymousElementByAttribute(document.documentElement, "anonid", "firetv-user-agent-input");
+					
+					element.setAttribute("placeholder",   FireTVPlugin.profileDefinition.userAgent);
+					var overriddenUserAgent = FireTVPlugin.bridge.getOverriddenUserAgent();
+					if (overriddenUserAgent) {
+						element.value = overriddenUserAgent;
+					}
+				]]>
+				</body>
+			</method>
+			<method name="_firetvUpdateUserAgent">
+				<body>
+				<![CDATA[
+					var FireTVPlugin = this._firetvGetInstance();
+					var bridge = FireTVPlugin.bridge;
+					
+					var element = document.getAnonymousElementByAttribute(document.documentElement, "anonid", "firetv-user-agent-input");
+					bridge.setOverriddenUserAgent(element.value.trim());
+					
+					element = document.getAnonymousElementByAttribute(document.documentElement, "anonid", "firetv-user-agent-checkbox");
+					FireTVPlugin.bridge.setUserAgentSuffixEnabled(element.checked);
+				]]>
+				</body>
+			</method>
+			<method name="_firetvResetUserAgent">
+				<body>
+				<![CDATA[
+					var FireTVPlugin = this._firetvGetInstance();
+					var bridge = FireTVPlugin.bridge;
+					
+					var element = document.getAnonymousElementByAttribute(document.documentElement, "anonid", "firetv-user-agent-input");
+					bridge.setOverriddenUserAgent();
+					element.value = "";
+					
+					FireTVPlugin.bridge.setUserAgentSuffixEnabled(true);
+					element = document.getAnonymousElementByAttribute(document.documentElement, "anonid", "firetv-user-agent-checkbox");
+					element.checked = true;
+				]]>
+				</body>
+			</method>
+			
+			<method name="_firetvMenuPopulateList">
+				<parameter name="list" />
+				<parameter name="items" />
+				<parameter name="attr" />
+				<body>
+				<![CDATA[  
+					while (list.firstChild) {
+						list.removeChild(list.firstChild);
+					}
+					var listItem, i;
+					for (i = 0; i < items.length; i++) {
+						listItem = document.createElement("option");
+						listItem.setAttribute("attr", attr);
+						listItem.setAttribute("value", items[i].value);
+						listItem.setAttribute("icon", items[i].icon);
+						listItem.setAttribute("label", items[i].label);
+						listItem.className = "firetv-dropdown-menu-list-item";
+						listItem.appendChild(document.createTextNode(items[i].label));
+						list.appendChild(listItem);
+					}
+				]]>
+				</body>
+			</method>
+			<method name="_firetvMenuSetCurrent">
+				<parameter name="list" />
+				<parameter name="item" />
+				<parameter name="attr" />
+				<body>
+				<![CDATA[
+					if (!item) {
+						return;
+					}
+					var i, value = (typeof item === "string") ? item : item.value;
+					for (i = 0; i < list.length; i++){
+						if (list[i].value === value) {
+							list.selectedIndex = i;
+							break;
+						}
+					}
+				]]>
+				</body>
+			</method>
+			<method name="_firetvSetToggleButton">
+				<parameter name="button" />
+				<parameter name="selected" />
+				<parameter name="label" />
+				<body>
+				<![CDATA[
+					while (button.firstChild) {
+						button.removeChild(button.firstChild);
+					}
+					button.appendChild(document.createTextNode(label));
+					button.setAttribute("value", selected);
+					button.className = (selected === true || selected === "true") ? "firetv-toggle-button on" : "firetv-toggle-button";
+				]]>
+				</body>
+			</method>
+			<method name="_firetvUpdateRemote">
+				<body>
+				<![CDATA[
+					var FireTVPlugin = this._firetvGetInstance();
+					
+					var element = document.getAnonymousElementByAttribute(document.documentElement, "anonid", "firetv-rc-popup-button");
+					while (element.firstChild) {
+						element.removeChild(element.firstChild);
+					}
+					element.appendChild(document.createTextNode(FireTVPlugin.messages["firetv.remote.toggleButton.label"]));
+				
+					var popup = document.getAnonymousElementByAttribute(document.documentElement, "anonid", "firetv-remote-control");
+					var remoteDiv = popup;
+					var children = popup.childNodes;
+					var i;
+					for (i = 0; i < children.length; i++) {
+						if (children[i].className && children[i].className === "firetv-popup-content") {
+							remoteDiv = children[i];
+							break;
+						}
+					}
+
+					while (remoteDiv.firstChild) {
+						remoteDiv.removeChild(remoteDiv.firstChild);
+					}
+
+					var remote = FireTVPlugin.UniversalRemote.profileRemoteDefinition;
+
+					var j, group, keys, key;
+					var groupDiv, keyDiv, labelDiv, shortcutDiv;
+
+					for (i = 0; i < remote.length; i++) {
+						group = remote[i];
+						groupDiv = document.createElement("div");
+						groupDiv.className = "firetv-rc-group";
+						for (j = 0; j < group.groupKeys.length; j++) {
+							key = group.groupKeys[j];
+							keyDiv = document.createElement("div");
+							keyDiv.className = "firetv-rc-key";
+							labelDiv = document.createElement("div");
+							labelDiv.className = "firetv-rc-key-label";
+							labelDiv.appendChild(document.createTextNode(key.displayName));
+							shortcutDiv = document.createElement("div");
+							shortcutDiv.className = "firetv-rc-key-shortcut";
+							shortcutDiv.appendChild(document.createTextNode(key.shortcutDisplayName));
+							keyDiv.appendChild(labelDiv);
+							keyDiv.appendChild(shortcutDiv);
+							groupDiv.appendChild(keyDiv);
+						}
+						remoteDiv.appendChild(groupDiv);
+					}
+				]]>
+				</body>
+			</method>
+			<constructor>
+			<![CDATA[
+				var FireTVPlugin = this._firetvGetInstance();
+				var bridge = FireTVPlugin.bridge;
+				
+				// -- hide bootstrap injected script from firebug
+				var script = document.getElementById("firetv-bootstrap");
+				if (script) {
+					script.firebugIgnore = !FireTVPlugin.DBG;
+				} 
+				 
+				var toIgnore = document.querySelectorAll(".firebug-ignore");
+				var i;
+				for (i = 0; i < toIgnore.length; i++) {
+					toIgnore[i].firebugIgnore = !FireTVPlugin.DBG;
+				}
+
+				var control, that = this;
+				
+				function initMenuList(id, getListCallback, getValueCallback, setValueCallback) {
+					var control = document.getAnonymousElementByAttribute(document.documentElement, "anonid", "firetv-" + id + "-chooser");
+					that._firetvMenuPopulateList(control, getListCallback(), id);
+					that._firetvMenuSetCurrent(control, getValueCallback(), id);
+					control.addEventListener("change", function(event) {
+					 	var item = event.target[event.target.selectedIndex];
+						setValueCallback(item.getAttribute("value"));
+						event.stopPropagation();
+					}, true);
+					bridge.addEventListener("firetv-config-change", (function(){
+						var node = control;
+						return function(event) {
+							if (event.configKey === id) {
+								that._firetvMenuSetCurrent(node, event.configValue, id);
+							}
+						}
+					})());
+				}
+				
+				function initToggleButton(id, getValueCallback, setValueCallback) {
+					var control = document.getAnonymousElementByAttribute(document.documentElement, "anonid", "firetv-" + id + "-toggle");
+					var label = FireTVPlugin.messages["firetv." + id + ".toggleButton.label"];
+					that._firetvSetToggleButton(control, getValueCallback(), label);
+					
+					control.addEventListener("click", function(event) {
+					 	var item = event.currentTarget;
+					 	var selected = (item.getAttribute("value") === "true");
+						setValueCallback(!selected);
+						//that._firetvSetToggleButton(item, !selected, label);
+						event.stopPropagation();
+					}, true);
+					bridge.addEventListener("firetv-config-change", (function(){
+						var node = control;
+						return function(event) {
+							if (event.configKey === id) {
+								that._firetvSetToggleButton(node, event.configValue, label);
+							}
+						}
+					})());
+				}
+				
+
+				// -- profile list
+				initMenuList("profile", bridge.getProfiles, bridge.getCurrentProfile, bridge.setCurrentProfile);
+
+				// -- scaling list
+				initMenuList("scaling", bridge.getUIScalings, bridge.getCurrentUIScaling, bridge.setCurrentUIScaling);
+				
+				// -- tv format list
+				initMenuList("tv-format", bridge.getTVFormats, bridge.getCurrentTVFormat, bridge.setCurrentTVFormat);
+				
+				// -- margin display toggle
+				initToggleButton("margin-display", bridge.getMarginDisplay, bridge.setMarginDisplay);
+				
+				// -- media player impl list
+				initMenuList("mediaplayer", bridge.getMediaPlayers, bridge.getMediaPlayer, bridge.setMediaPlayer);
+				
+				// -- broadcast player impl list
+				initMenuList("broadcastplayer", bridge.getBroadcastPlayers, bridge.getBroadcastPlayer, bridge.setBroadcastPlayer);
+
+				// -- tv image display toggle
+				initToggleButton("tvimage-display", bridge.getTVImageDisplay, bridge.setTVImageDisplay);
+
+				// -- channel list
+				initMenuList("tv-channel", bridge.getTVChannels, bridge.getCurrentTVChannel, bridge.setCurrentTVChannel);
+				
+				//this._firetvMenuSetCurrent({value:currentCCID,label: currentCCID.replace(/^ccid:/,"") + " - " + currentChannel.name },"firetv-tv-channel-chooser", "tv-channel");
+			
+
+				// -- remote
+				this._firetvUpdateRemote();
+
+				// -- init stream events controls
+				this._firetvInitStreamEventValues();
+				
+				// -- init user-agent controls
+				this._firetvInitUserAgentValue();
+			]]>
+			</constructor>
+		</implementation>
+	</binding>
+
+
+	<binding id="firetv-dropdown-menu" bindToUntrustedContent="true">
+		<content>
+			<children />
+		</content>
+		<handlers>
+			<!-- prevent keyboard select navigation which can break page navigation -->
+			<handler event="keydown">
+			<![CDATA[
+				event.preventDefault();
+				event.target.blur();
+			]]>
+			</handler>
+			<handler event="keypress">
+			<![CDATA[
+				event.preventDefault();
+				event.target.blur();
+			]]>
+			</handler>
+			<handler event="keyup">
+			<![CDATA[
+				event.preventDefault();
+				event.target.blur();
+			]]>
+			</handler>
+		</handlers>
+	</binding>
+
+	<binding id="firetv-image-button" bindToUntrustedContent="true">
+		<content>
+			<children />
+			<html:img anonid="firetv-popup-button-icon" src="" ></html:img>
+		</content>
+		<implementation>
+			<constructor>
+			<![CDATA[
+				 var icon = document.getAnonymousElementByAttribute(this, "anonid", "firetv-popup-button-icon");
+				 icon.setAttribute("src", this.getAttribute("firetv-icon"));
+			]]>
+			</constructor>
+		</implementation>
+		<handlers>
+			<handler event="click" phase="capturing">
+			<![CDATA[
+				var FireTVPlugin = document.documentElement._firetvGetInstance();
+				var bridge = FireTVPlugin.bridge;
+				
+				var method = this.getAttribute("firetv-bridge-callback");
+				bridge[method]();
+				event.stopPropagation();
+			]]>
+			</handler>
+		</handlers>
+	</binding>
+
+	<binding id="firetv-popup-button" bindToUntrustedContent="true">
+		<content>
+			<children />
+		</content>
+		<handlers>
+			<handler event="click" phase="capturing">
+			<![CDATA[
+				var popupButton = event.target;
+				var popupId = popupButton.getAttribute("popup-anonid");
+				var popup = document.getAnonymousElementByAttribute(document.documentElement, "anonid", popupId);
+
+				var popupContent = null;
+				var children = popup.childNodes;
+				for (var i = 0; i < children.length; i++){
+					if (children[i].className === "firetv-popup-content") {
+						popupContent = children[i];
+						break;
+					}
+				}
+				if (popup.className == "firetv-popup"){
+					if (popupContent) {
+						popupContent.style.setProperty("left", event.clientX + "px", "important");
+					}
+					popup.className = "firetv-popup on";
+				} else {
+					popup.className = "firetv-popup";
+				}
+				event.stopPropagation();
+			]]>
+			</handler>
+		</handlers>
+	</binding>
+
+	<binding id="firetv-widget-button" bindToUntrustedContent="true">
+		<content>
+			<children />
+		</content>
+		<implementation>
+			<constructor>
+				<![CDATA[
+				var FireTVPlugin = document.documentElement._firetvGetInstance();
+				var bridge = FireTVPlugin.bridge;
+				
+				// initialize state
+				var widgetButton = this;
+				 
+				var labelId = widgetButton.getAttribute("widget-button-label-id");
+				while(widgetButton.firstChild){
+					widgetButton.removeChild(widgetButton.firstChild);
+				}
+				widgetButton.appendChild(document.createTextNode(FireTVPlugin.messages[labelId]));
+				 
+				var widgetId = widgetButton.getAttribute("widget-anonid");
+				var widget = document.getAnonymousElementByAttribute(document.documentElement, "anonid", widgetId);
+				var attr = widgetButton.getAttribute("attr");
+				var display = bridge.getWidgetVisible(attr);
+				if (display) {
+				 	widget.style.setProperty("display", "inline-block", "important");
+				 	widgetButton.className = "firetv-widget-button on";
+				} else {
+					widget.style.setProperty("display", "none", "important");
+				  	widgetButton.className = "firetv-widget-button";
+				}
+				]]>
+			</constructor>
+		</implementation>
+		<handlers>
+			<handler event="click" phase="capturing">
+			<![CDATA[
+				var FireTVPlugin = document.documentElement._firetvGetInstance();
+				var bridge = FireTVPlugin.bridge;
+				
+				if (event.currentTarget != event.originalTarget) {
+					return;
+				}
+				var widgetButton = event.currentTarget;
+				var widgetId = widgetButton.getAttribute("widget-anonid");
+				var widget = document.getAnonymousElementByAttribute(document.documentElement, "anonid", widgetId);
+				var attr = widgetButton.getAttribute("attr");
+				if (widget.style.display == "none") {
+					widget.style.setProperty("display", "inline-block", "important");
+				  	widgetButton.className = "firetv-widget-button on";
+				  	bridge.setWidgetVisible(attr, true);
+				} else {
+				  	widget.style.setProperty("display", "none", "important");
+				  	widgetButton.className = "firetv-widget-button";
+				  	bridge.setWidgetVisible(attr, false);
+				}
+				event.stopPropagation();
+			]]>
+			</handler>
+		</handlers>
+	</binding>
+	<binding id="firetv-popup" bindToUntrustedContent="true">
+		<content>
+			<html:table width="100%" height="100%">
+				<html:tr>
+					<html:td style="text-align:center; vertical-align:middle">
+						<html:table style="display: inline-block; max-height: 90vh; padding-right:18px;">
+							<html:tr>
+								<html:td class="firetv-popup-content">
+									<children />
+								</html:td>
+							</html:tr>
+						</html:table>
+					</html:td>
+				</html:tr>
+			</html:table>
+		</content>
+		<handlers>
+			<handler event="click" phase="capturing">
+			<![CDATA[
+				   event.currentTarget.className = "firetv-popup";
+				   event.stopPropagation();
+			]]>
+			</handler>
+		</handlers>
+	</binding>
+	<binding id="firetv-popup-noautohide" bindToUntrustedContent="true">
+		<content>
+			<html:table width="100%" height="100%">
+				<html:tr>
+					<html:td style="text-align:center; vertical-align:middle">
+						<html:table style="display: inline-block">
+							<html:tr>
+								<html:td class="firetv-popup-content">
+									<children />
+								</html:td>
+							</html:tr>
+						</html:table>
+					</html:td>
+				</html:tr>
+			</html:table>
+		</content>
+	</binding>
+	<binding id="firetv-widget" bindToUntrustedContent="true">
+		<content>
+			<html:div class="firetv-widget-content">
+				<children />	
+			</html:div>
+		</content>
+	</binding>
+	
+	<binding id="firetv-stream-infos-input" bindToUntrustedContent="true">
+		<content>
+			<children />
+		</content>
+		<implementation>
+			<constructor>
+				<![CDATA[
+				//firetv-stream-infos-input
+				]]>
+			</constructor>
+			<method name="_firetvValidateInput">
+				<parameter name="applyChanges" />
+				<body>
+				<![CDATA[  
+					var FireTVPlugin = document.documentElement._firetvGetInstance();
+					var bridge = FireTVPlugin.bridge;
+					
+					var maxWidth = 800, minWidth = 80, adjust = 0;
+					var tester = document.getAnonymousElementByAttribute(document.documentElement, "anonid", "firetv-stream-infos-tester");
+					
+					var val = this.value;
+					
+					var url = "N/A";
+					var ccid = bridge.getCurrentTVChannel().ccid;
+					var channel = bridge.getTVChannelByCcid(ccid);
+					 
+					if (ccid !== "ccid:-1" && channel.defaultStream && channel.defaultStream !== "") {
+						url = channel.defaultStream;
+					}
+					
+					var previousStream = channel.stream;
+					
+					if (val.trim() === "") {
+						val = url;
+						if (val === "N/A") {
+							val = "";
+							if (applyChanges) {
+								bridge.setChannelCustomStream(ccid, null);
+							}
+						}
+						if (applyChanges) {
+							this.value = val;
+						}
+					} 
+					
+					val = this.value;
+					
+					var escaped = val.replace(/&/g, '&amp;').replace(/\s/g,' ').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+						                
+	                while (tester.firstChild) {
+	                	tester.removeChild(tester.firstChild);
+	                }
+	                tester.appendChild(document.createTextNode(escaped));
+
+					var testerWidth = tester.clientWidth;
+					var newWidth = (testerWidth >= minWidth) ? testerWidth + adjust : minWidth;
+					newWidth = Math.min(newWidth, maxWidth);
+					
+                    var currentWidth = this.clientWidth;
+                    var isValidWidthChange = (newWidth < currentWidth && newWidth >= minWidth)
+                                         || (newWidth > minWidth && newWidth <maxWidth);
+
+	                if (isValidWidthChange) {
+	                	this.style.setProperty("width", newWidth + "px", "important");
+	                }
+	                
+	                if (applyChanges && val !== previousStream) {
+	                	bridge.setChannelCustomStream(ccid, val);
+	                	FireTVPlugin.bridge.dispatchEvent({type: "firetv-stream-change"});
+	                }
+				]]>
+				</body>
+			</method>
+		</implementation>
+		<handlers>
+			<handler event="focus">
+				<![CDATA[
+					//this.setSelectionRange(0, this.value.length);
+				]]>
+			</handler>
+			<handler event="blur">
+				<![CDATA[
+					this._firetvValidateInput(true);
+				]]>
+			</handler>
+			<handler event="keypress" phase="capturing">
+				<![CDATA[
+					this._firetvValidateInput();
+					event.stopPropagation();
+					if (event.keyCode === 13) {
+						var that = event.target;
+						setTimeout(function() {
+							that.blur();
+						}, 50);
+					}
+				]]>
+			</handler>
+			<handler event="keydown" phase="capturing">
+				<![CDATA[
+					event.stopPropagation();
+				]]>
+			</handler>
+			<handler event="keyup" phase="capturing">
+				<![CDATA[
+					this._firetvValidateInput();
+					event.stopPropagation();
+				]]>
+			</handler>
+		</handlers>
+	</binding>
+	<binding id="firetv-input-mode" bindToUntrustedContent="true">
+		<content>
+			<children />
+		</content>
+		<implementation>
+			<constructor>
+				<![CDATA[
+					var FireTVPlugin = document.documentElement._firetvGetInstance();
+					var bridge = FireTVPlugin.bridge;
+					
+					var that = this.wrappedJSObject;
+					that._firetvShowIME = function () {
+						var popup = document.getAnonymousElementByAttribute(document.documentElement, "anonid", "firetv-input-ime");
+						if (popup.className == "firetv-popup-noautohide"){
+							popup.className = "firetv-popup-noautohide on";
+						} else {
+							popup.className = "firetv-popup-noautohide";
+						}
+						
+						var imeDiv = popup;
+						var children = popup.childNodes;
+						var i;
+						for (i=0; i<children.length; i++){
+							if (children[i].className && children[i].className === "firetv-popup-content"){
+								imeDiv = children[i];
+								break;
+							}
+						}
+	
+						while(imeDiv.firstChild){
+							imeDiv.removeChild(imeDiv.firstChild);
+						}
+	
+						var that = this;
+						
+						var validate = function(){
+							popup.className = "firetv-popup-noautohide";
+							that.value = input.value;
+							that.focus();
+							that.setSelectionRange(that.value.length, that.value.length);
+						};
+						
+						var form = document.createElement("form");
+						form.onkeydown = function(event){
+							if (event.keyCode == KeyboardEvent.DOM_VK_ESCAPE) {
+								popup.className = "firetv-popup-noautohide";
+								that.focus();
+								that.setSelectionRange(that.value.length, that.value.length);
+							}
+							event.stopPropagation();
+						};
+						form.onkeypress = function(event){
+							event.stopPropagation();
+						};
+						form.onkeyup = function(event){
+							event.stopPropagation();
+						};
+						form.onsubmit = function(){
+							validate();
+							return false;
+						};
+						imeDiv.appendChild(form);
+						
+						var div = document.createElement("div");
+						div.className = "firetv-input-ime-inputwrapper";
+						form.appendChild(div);
+						
+						var input = document.createElement(this.nodeName);
+						input.type = that.type;
+						input.setAttribute("tabindex", "-1");
+						input.value = that.value;
+						input.maxlength = that.maxlength;
+						input.className = "firetv-input-ime";
+						div.appendChild(input);
+						
+						div = document.createElement("div");
+						div.className = "firetv-input-ime-buttonswrapper";
+						form.appendChild(div);
+						
+						var okButton = document.createElement("button");
+						okButton.className = "firetv-input-ime-buttonok";
+						okButton.type = "submit";
+						okButton.setAttribute("tabindex", "-1");
+						okButton.appendChild(document.createTextNode(FireTVPlugin.messages["firetv.button.ok"]));
+						okButton.addEventListener("mousedown", function (event) {
+							validate();
+							event.stopPropagation();
+						}, true);	
+						div.appendChild(okButton);
+						
+						function cancel(event) {
+							popup.className = "firetv-popup-noautohide";
+							that.focus();
+							that.setSelectionRange(that.value.length, that.value.length);
+							event.stopPropagation();
+						}
+						
+						var cancelButton = document.createElement("button");
+						cancelButton.type = "button";
+						cancelButton.className = "firetv-input-ime-buttoncancel";
+						cancelButton.setAttribute("tabindex", "-1");
+						cancelButton.appendChild(document.createTextNode(FireTVPlugin.messages["firetv.button.cancel"]));
+						cancelButton.addEventListener("mousedown", cancel, true);	
+						div.appendChild(cancelButton);
+						
+						input.addEventListener("blur", cancel, false);	
+						
+						input.focus();
+						input.setSelectionRange(input.value.length, input.value.length);
+					}
+				]]>
+			</constructor>
+		</implementation>
+		<handlers>
+			<handler event="focus">
+				<![CDATA[
+					this.setAttribute("autocomplete", "off");
+					this.setAttribute("readonly", "readonly");
+					
+					var imeHint = document.getAnonymousElementByAttribute(document.body, "anonid", "firetv-ime-hint");
+					
+					var inputBounds = this.getBoundingClientRect();
+					var bodyBounds = document.body.getBoundingClientRect();
+					var margin = 12;
+					
+					var lineHeight = parseInt(window.getComputedStyle(this, null).lineHeight.replace(/px$/, ""), 10);
+					var imeSize = (this.nodeName.toLowerCase() == "input") ? (inputBounds.height - margin) : lineHeight;
+					
+					imeSize = lineHeight; 
+					
+					imeHint.style.setProperty("top", Math.round(inputBounds.top - bodyBounds.top + (margin / 2)) + "px", "important");
+					imeHint.style.setProperty("left", Math.round(inputBounds.left + this.offsetWidth - imeSize - bodyBounds.left - (margin / 2)) + "px", "important");
+					imeHint.style.setProperty("width", imeSize + "px", "important");
+					imeHint.style.setProperty("height", imeSize + "px", "important");
+					imeHint.style.setProperty("visibility", "visible", "important");
+					this.setSelectionRange(this.value.length, this.value.length);
+				]]>
+			</handler>
+			<handler event="blur">
+				<![CDATA[
+					var imeHint = document.getAnonymousElementByAttribute(document.body, "anonid", "firetv-ime-hint");
+					imeHint.style.setProperty("visibility", "hidden", "important");
+				]]>
+			</handler>
+		</handlers>
+	</binding>
+	
+	<binding id="firetv-body-behaviour" bindToUntrustedContent="true">
+		<resources>
+			<stylesheet src="chrome://firetv-ui/content/css/tv-frame-margin.css" />
+			<stylesheet src="chrome://firetv-ui/content/css/ime-hint.css" />
+		</resources>
+		<content>
+			<children />
+			<html:div id="firetv-tvframe-nw" class="firetv-tvframe"></html:div>
+			<html:div id="firetv-tvframe-n" class="firetv-tvframe"></html:div>
+			<html:div id="firetv-tvframe-ne" class="firetv-tvframe"></html:div>
+			<html:div id="firetv-tvframe-e" class="firetv-tvframe"></html:div>
+			<html:div id="firetv-tvframe-se" class="firetv-tvframe"></html:div>
+			<html:div id="firetv-tvframe-s" class="firetv-tvframe"></html:div>
+			<html:div id="firetv-tvframe-sw" class="firetv-tvframe"></html:div>
+			<html:div id="firetv-tvframe-w" class="firetv-tvframe"></html:div>
+			<html:div id="firetv-margin-nw" class="firetv-margin"></html:div>
+			<html:div id="firetv-margin-n" class="firetv-margin"></html:div>
+			<html:div id="firetv-margin-ne" class="firetv-margin"></html:div>
+			<html:div id="firetv-margin-e" class="firetv-margin"></html:div>
+			<html:div id="firetv-margin-se" class="firetv-margin"></html:div>
+			<html:div id="firetv-margin-s" class="firetv-margin"></html:div>
+			<html:div id="firetv-margin-sw" class="firetv-margin"></html:div>
+			<html:div id="firetv-margin-w" class="firetv-margin"></html:div>
+			<html:div anonid="firetv-ime-hint"></html:div>
+		</content>
+		<implementation>
+			<constructor>
+				<![CDATA[
+				]]>
+			</constructor>
+		</implementation>
+		<handlers>
+			<handler event="mousedown">
+			<![CDATA[
+				var el = document.activeElement;
+				document.activeElement.blur();
+				el.focus();
+			]]>
+			</handler>
+		</handlers>
+	</binding>
+
+</bindings>

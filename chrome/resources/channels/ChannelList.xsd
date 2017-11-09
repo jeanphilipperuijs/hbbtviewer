@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified">
+	<xs:element name="ChannelConfig">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ChannelList" />
+				<xs:sequence minOccurs="0">
+					<xs:element ref="FavouriteLists" />
+					<xs:element ref="CurrentFavouriteList" minOccurs="0" />
+				</xs:sequence>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ChannelList">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Channel" minOccurs="0" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Channel">
+		<xs:annotation>
+			<xs:documentation>
+				For a DVB digital channel use ONID+TSID+SID,
+				for an ISDB (ARIB) digital channel use ONID+TSID+SID,
+				for a ATSC terrestrial channel use SourceID,
+				for analog channel use Freq and CNI (if available).
+				The IPBroadcastID element is relevant for IPTV broadcasts, as defined
+				in Section 7.5.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:choice>
+					<xs:sequence>
+						<xs:element ref="ONID" />
+						<xs:element ref="TSID" />
+						<xs:element ref="SID" />
+					</xs:sequence>
+					<xs:element ref="SourceID" />
+					<xs:sequence>
+						<xs:element ref="Freq" />
+						<xs:element ref="CNI" minOccurs="0" />
+					</xs:sequence>
+					<xs:element ref="IPBroadcastID" />
+				</xs:choice>
+				<xs:element ref="Name" />
+				<xs:element ref="Favourite" minOccurs="0" />
+				<xs:element ref="Recordable" minOccurs="0" />
+				<xs:element ref="Locked" minOccurs="0" />
+				<xs:element ref="ManualBlock" minOccurs="0" />
+			</xs:sequence>
+			<xs:attribute name="CCID" type="xs:ID" use="required" />
+			<xs:attribute name="channelType" type="xs:string"
+				default="TYPE_OTHER" />
+			<xs:attribute name="idType" type="xs:string" use="required" />
+			<xs:attribute name="TunerID" type="xs:ID" minOccurs="0" />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ONID" type="xs:integer" />
+	<xs:element name="TSID" type="xs:integer" />
+	<xs:element name="SID" type="xs:integer" />
+	<xs:element name="SourceID" type="xs:integer" />
+	<xs:element name="Freq" type="xs:integer" />
+	<xs:element name="CNI" type="xs:integer" />
+	<xs:element name="IPBroadcastID" type="xs:string" />
+	<xs:element name="MajorChannel" type="xs:integer" />
+	<xs:element name="MinorChannel" type="xs:integer" />
+	<xs:element name="Name" type="xs:string" />
+	<xs:element name="Favourite">
+		<xs:complexType>
+			<xs:attribute name="FavIDS" type="xs:IDREFS" />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="FavouriteLists">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="FavouriteList" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="FavouriteList">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="FavName">
+					<xs:attribute name="FavID" type="xs:ID" use="required" />
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="FavName">
+		<xs:sequence>
+			<xs:element ref="FavName" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="FavName" type="xs:string" />
+	<xs:element name="CurrentFavouriteList">
+		<xs:complexType>
+			<xs:attribute name="FavID" type="xs:IDREF" use="required" />
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Recordable" type="xs:boolean" />
+	<xs:element name="Locked" type="xs:boolean" />
+	<xs:element name="ManualBlock" type="xs:boolean" />
+</xs:schema>

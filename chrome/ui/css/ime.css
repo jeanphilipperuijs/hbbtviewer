@@ -1,0 +1,34 @@
+
+
+.firetv-input-ime-inputwrapper {
+	position: static !important;
+	width: 350px !important;
+	text-align:center !important;
+	margin-top: 10px !important;
+}
+
+.firetv-input-ime {
+	width: 330px !important;
+	font-size: 25px !important;
+}
+
+textarea.firetv-input-ime {
+	height:120px !important;
+	font-size: 25px !important;
+}
+
+.firetv-input-ime-buttonswrapper {	
+	position: static !important;
+	width: 350px !important;
+	text-align:center !important;
+	margin-bottom: 10px !important;
+}
+
+.firetv-input-ime-buttonok{
+	float: right;
+	margin: 10px 10px 0 0 !important;
+}
+.firetv-input-ime-buttoncancel{
+	float: left;
+	margin: 10px 0 0 10px !important;
+}

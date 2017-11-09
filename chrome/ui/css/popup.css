@@ -1,0 +1,102 @@
+/* See license.txt for terms of usage */
+
+.firetv-popup-button {
+	position:relative !important;
+	top: 0px !important;
+}
+.firetv-popup-button {
+	-moz-binding:
+		url(chrome://firetv-ui/content/bindings/bindings.xml#firetv-popup-button)
+		!important;
+	-moz-appearance: none !important;
+	height: 25px !important;
+	display: inline-block !important;
+	border: 1px solid #bbb !important;
+	padding: 0px 5px 6px 5px !important;
+	cursor: pointer !important;
+	outline: none !important; 
+	line-height: 21px !important;
+	vertical-align: middle !important;
+	color: rgb(255,255,255) !important;
+	background: rgba(248,248,248,0.1) !important;
+	border-radius: 6px !important;
+}
+
+.firetv-popup-button:hover {
+	box-shadow: 0 0 3px 1px #EEE !important;
+	transition: box-shadow .3s ease-in !important;
+}
+
+
+.firetv-popup, .firetv-popup-noautohide {
+	-moz-user-select: -moz-none !important;
+	background-color : rgba(10,10,10, 0.5) !important;
+	position: absolute !important;
+	width:100% !important;
+	top: 40px !important;
+	bottom:0px !important;
+	left: -6000px !important;
+	
+	text-align:center !important;
+	vertical-align:middle !important;
+	
+	visibility: visible !important;
+	z-index: 2000000003 !important;
+}
+
+.firetv-popup {
+	-moz-binding:
+		url(chrome://firetv-ui/content/bindings/bindings.xml#firetv-popup)
+		!important;
+}
+
+.firetv-popup-noautohide {
+	-moz-binding:
+		url(chrome://firetv-ui/content/bindings/bindings.xml#firetv-popup-noautohide)
+		!important;
+}
+
+.firetv-popup *, .firetv-popup-noautohide * {
+	position: static !important;
+	overflow:auto !important;
+	color: #444444 !important;
+	font-family: sans-serif !important;
+	font-size: 11px !important;
+	line-height: 16px !important;
+}
+
+.firetv-popup.on, .firetv-popup-noautohide.on{
+	left: 0 !important;
+}
+
+.firetv-popup-content {
+	-moz-user-select: -moz-none !important;
+	
+	background-color: rgba(240,240,240,0.8) !important;
+	border-radius: 20px !important;
+	padding:10px 10px 0px 20px !important;
+	color: #444444 !important;
+	font-family: Arial, sans-serif !important;
+	font-size: 11px !important;
+	line-height: 16px !important;
+	font-weight: bold !important;
+	text-align: left !important;
+	vertical-align: middle !important;
+	text-shadow: #ACACAC 1px 1px 1px !important;
+}
+
+.firetv-popup-content * {
+	font-family: Arial, sans-serif !important;
+	font-size: 11px !important;
+	line-height: 16px !important;
+}
+
+html[firetv-fullscreen="false"] .firetv-popup {
+	opacity: 1 !important;
+	transition: opacity 0.6s ease-in !important;
+}
+
+html[firetv-fullscreen="true"] .firetv-popup {
+	opacity: 0 !important;
+	transition: opacity 0.6s ease-in !important;
+}

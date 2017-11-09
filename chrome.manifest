@@ -1,0 +1,29 @@
+content   firetv                 chrome/content/
+content   firetv-comp            chrome/components/
+content   firetv-images          chrome/resources/images/      contentaccessible=yes
+content   firetv-fonts           chrome/resources/fonts/       contentaccessible=yes
+content   firetv-channels        chrome/resources/channels/    contentaccessible=yes
+content   firetv-ui              chrome/ui/                  contentaccessible=yes
+content   firetv-profile         chrome/profiles/              contentaccessible=yes
+skin      firetv   classic/1.0   chrome/skin/
+
+locale    firetv   en-US         chrome/locale/en-US/
+locale    firetv   fr-FR         chrome/locale/fr-FR/
+
+resource  firetv chrome/
+
+overlay   chrome://firebug/content/firebugOverlay.xul chrome://firetv/content/firebug-overlay.xul
+overlay   chrome://browser/content/browser.xul chrome://firetv/content/overlay.xul
+
+component {b1365311-3f16-442d-a060-cb33d9d93abf} chrome/components/firetvprotocol.js
+contract @mozilla.org/network/protocol;1?name=firetv {b1365311-3f16-442d-a060-cb33d9d93abf}
+
+component {8c259d92-dc29-11df-a544-f516e0d72085} chrome/components/tvprotocol.js
+contract @mozilla.org/network/protocol;1?name=tv {8c259d92-dc29-11df-a544-f516e0d72085}
+
+component {d8eb9460-edc6-11e0-be50-0800200c9a66} chrome/components/dvbprotocol.js
+contract @mozilla.org/network/protocol;1?name=dvb {d8eb9460-edc6-11e0-be50-0800200c9a66}
+
+component {fe63ff00-c285-11e0-962b-0800200c9a66} chrome/components/hbbtv-streamconverter.js
+contract @mozilla.org/streamconv;1?from=application/vnd.hbbtv.xhtml+xml&to=*/* {fe63ff00-c285-11e0-962b-0800200c9a66}
+contract @mozilla.org/streamconv;1?from=application/ce-html+xml&to=*/* {fe63ff00-c285-11e0-962b-0800200c9a66}

@@ -1,0 +1,243 @@
+/* See license.txt for terms of usage */
+
+#firetv-margin-nw {
+	position: absolute !important;
+	top: 0 !important;
+	left: 0 !important;
+	right: auto !important;
+	bottom: auto !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	-moz-box-sizing: border-box;
+	border-width: 0 !important;
+	pointer-events: none !important;
+}
+
+#firetv-margin-n {
+	position: absolute !important;
+	top: 0 !important;
+	left: auto !important;
+	right: auto !important;
+	bottom: auto !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	-moz-box-sizing: border-box;
+	border-width: 0 !important;
+	border-bottom: 1px dashed #F0F0F0 !important;
+	pointer-events: none !important;
+}
+
+#firetv-margin-ne {
+	position: absolute !important;
+	top: 0 !important;
+	left: auto !important;
+	right: 0 !important;
+	bottom: auto !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	-moz-box-sizing: border-box;
+	border-width: 0 !important;
+	pointer-events: none !important;
+}
+
+#firetv-margin-e {
+	position: absolute !important;
+	top: auto !important;
+	left: auto !important;
+	right: 0 !important;
+	bottom: auto !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	-moz-box-sizing: border-box;
+	border-width: 0 !important;
+	border-left: 1px dashed #F0F0F0 !important;
+	pointer-events: none !important;
+}
+
+#firetv-margin-se {
+	position: absolute !important;
+	top: auto !important;
+	left: auto !important;
+	right: 0 !important;
+	bottom: 0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	-moz-box-sizing: border-box;
+	border-width: 0 !important;
+	pointer-events: none !important;
+}
+
+#firetv-margin-s {
+	position: absolute !important;
+	top: auto !important;
+	left: auto !important;
+	right: auto !important;
+	bottom: 0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	-moz-box-sizing: border-box;
+	border-width: 0 !important;
+	border-top: 1px dashed #F0F0F0 !important;
+	pointer-events: none !important;
+}
+
+#firetv-margin-sw {
+	position: absolute !important;
+	top: auto !important;
+	left: 0 !important;
+	right: auto !important;
+	bottom: 0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	-moz-box-sizing: border-box;
+	border-width: 0 !important;
+	pointer-events: none !important;
+}
+
+#firetv-margin-w {
+	position: absolute !important;
+	top: 25px !important;
+	left: 0 !important;
+	right: auto !important;
+	bottom: auto !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	-moz-box-sizing: border-box;
+	border-width: 0 !important;
+	border-right: 1px dashed #F0F0F0 !important;
+	pointer-events: none !important;
+}
+
+/* TV Frame*/
+#firetv-tvframe-nw {
+	position: absolute !important;
+	top: 0 !important;
+	left: 0 !important;
+	right: auto !important;
+	bottom: auto !important;
+	width:2px !important;
+	height:2px !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	-moz-box-sizing: border-box;
+	border-width: 0 !important;
+	pointer-events: none !important;
+}
+
+#firetv-tvframe-n {
+	position: absolute !important;
+	top: 0 !important;
+	left: 2px !important;
+	right: 2px !important;
+	bottom: auto !important;
+	height:2px !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	-moz-box-sizing: border-box;
+	border-width: 0 !important;
+	pointer-events: none !important;
+}
+
+#firetv-tvframe-ne {
+	position: absolute !important;
+	top: 0 !important;
+	left: auto !important;
+	right: 0 !important;
+	bottom: auto !important;
+	height:2px !important;
+	width:2px !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	-moz-box-sizing: border-box;
+	border-width: 0 !important;
+	pointer-events: none !important;
+}
+
+#firetv-tvframe-e {
+	position: absolute !important;
+	top: 2px !important;
+	left: auto !important;
+	right: 0 !important;
+	bottom: 2px !important;
+	width:2px !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	-moz-box-sizing: border-box;
+	border-width: 0 !important;
+	pointer-events: none !important;
+}
+
+#firetv-tvframe-se {
+	position: absolute !important;
+	top: auto !important;
+	left: auto !important;
+	right: 0 !important;
+	bottom: 0 !important;
+	height:2px !important;
+	width:2px !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	-moz-box-sizing: border-box;
+	border-width: 0 !important;
+	pointer-events: none !important;
+}
+
+#firetv-tvframe-s {
+	position: absolute !important;
+	top: auto !important;
+	left: 2px !important;
+	right: 2px !important;
+	bottom: 0 !important;
+	height:2px !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	-moz-box-sizing: border-box;
+	border-width: 0 !important;
+	pointer-events: none !important;
+}
+
+#firetv-tvframe-sw {
+	position: absolute !important;
+	top: auto !important;
+	left: 0 !important;
+	right: auto !important;
+	bottom: 0 !important;
+	height:2px !important;
+	width:2px !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	-moz-box-sizing: border-box;
+	border-width: 0 !important;
+	pointer-events: none !important;
+}
+
+#firetv-tvframe-w {
+	position: absolute !important;
+	top: 2px !important;
+	left: 0 !important;
+	right: auto !important;
+	bottom: 2px !important;
+	width:2px !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	-moz-box-sizing: border-box;
+	border-width: 0 !important;
+	pointer-events: none !important;
+}
+
+.firetv-tvframe {
+	background-color: rgba(186,186,186,0.2) !important;
+	visibility: visible !important;
+	z-index: 2000000000 !important;
+	pointer-events: none !important;
+}
+
+html[firetv-fullscreen="false"] .firetv-tvframe {
+	opacity: 1 !important;
+	transition: opacity 0.6s ease-in !important;
+}
+
+html[firetv-fullscreen="true"] .firetv-tvframe {
+	opacity: 0 !important;
+	transition: opacity 0.6s ease-in !important;
+}

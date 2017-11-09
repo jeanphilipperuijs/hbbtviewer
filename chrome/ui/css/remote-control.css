@@ -1,0 +1,34 @@
+/* See license.txt for terms of usage */
+
+.firetv-rc-group {
+	margin-bottom: 15px !important;
+}
+
+.firetv-rc-key {
+	height: 16px !important;
+	white-space: nowrap !important;
+	overflow: hidden !important;
+}
+
+.firetv-rc-key-label {
+	display: inline-block !important;
+	width: 110px !important;
+	font-weight: bold !important;
+	text-align: right !important;
+	padding-right : 5px !important;
+	white-space: nowrap !important;
+	overflow: hidden !important;
+}
+
+.firetv-rc-key-label:after {
+	content : " : " !important;
+	
+}
+.firetv-rc-key-shortcut {
+	display: inline-block !important;
+	width: 110px !important;
+	font-weight: normal !important;
+	padding-left : 5px !important;
+	white-space: nowrap !important;
+	overflow: hidden !important;
+}

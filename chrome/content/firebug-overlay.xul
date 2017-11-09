@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- See license.txt for terms of usage  -->
+<?xml-stylesheet href="chrome://firetv/skin/overlay.css" type="text/css"?>
+<!DOCTYPE overlay>
+<overlay id="firetv-firebug-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+   <script type="application/x-javascript" src="chrome://firebug/content/moduleConfig.js"/>
+   <script type="application/x-javascript" src="chrome://firetv/content/firebug-overlay.js"/>
+</overlay>

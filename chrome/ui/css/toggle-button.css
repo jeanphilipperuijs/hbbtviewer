@@ -1,0 +1,37 @@
+/* See license.txt for terms of usage */
+
+/* toggle button*/
+.firetv-toggle-button {
+	position:relative !important;
+	top: -3px !important;
+}
+.firetv-toggle-button {
+	-moz-appearance: none !important;
+	height: 25px !important;
+	display: inline-block !important;
+	border: 1px solid #bbb !important;
+	padding: 0px 5px 6px 5px !important;
+	margin: 0 5px 0 0!important;
+	cursor: pointer !important;
+	outline: none !important; /* remove focus ring from Webkit */
+	
+	border-radius: 6px !important;
+	
+	outline: none !important; /* remove focus ring from Webkit */
+	line-height: 21px !important;
+	vertical-align: middle !important;
+	font-weight: normal !important;
+	color: rgba(255,255,255,0.5) !important;
+	background: rgba(248,248,248,0.1) !important;
+}
+
+.firetv-toggle-button:hover {
+	box-shadow: 0 0 3px 1px #EEE !important;
+	transition: box-shadow .3s ease-in !important;
+}
+
+.firetv-toggle-button.on {
+	font-weight: normal !important;
+	color: #fff !important;
+	background: rgba(248,248,248,0.3) !important;
+}

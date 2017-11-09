@@ -1,0 +1,199 @@
+/* See license.txt for terms of usage */
+
+.firetv-widget-button {
+	position:relative !important;
+	top: 0px !important;
+}
+.firetv-widget-button {
+ 	-moz-binding: 
+		url(chrome://firetv-ui/content/bindings/bindings.xml#firetv-widget-button)
+		!important; 
+	-moz-appearance: none !important;
+	height: 25px !important;
+	display: inline-block !important;
+	border: 1px solid #bbb !important;
+	padding: 0px 5px 6px 5px !important;
+	cursor: pointer !important;
+	outline: none !important; 
+	line-height: 21px !important;
+	vertical-align: middle !important;
+	border-radius: 6px !important;
+	font-weight: normal !important;
+	color: rgba(255,255,255,0.5) !important;
+	background: rgba(248,248,248,0.1) !important;
+	text-shadow: none !important;
+}
+
+.firetv-widget-button:hover {
+	box-shadow: 0 0 3px 1px #EEE !important;
+	transition: box-shadow .3s ease-in !important;
+}
+
+.firetv-widget-button.on {
+	font-weight: normal !important;
+	color: #fff !important;
+	background: rgba(12,12,12,0.3) !important;
+}
+
+.firetv-widgets{
+	position: absolute !important;
+	left: 0 !important;
+	bottom: 0 !important;
+	right: 80px !important;
+	top: 60px !important;
+	pointer-events: none !important;
+}
+
+.firetv-widget {
+/* 	background-color: rgba(12,12,12,0.8) !important; */
+	background-color: rgba(103,103,103, 0.9) !important;
+/* 	background-image: linear-gradient(rgba(255, 255, 255, 0.5), transparent), url(chrome://firetv-images/content/background.svg) !important; */
+/* 	background-repeat: repeat !important; */
+	position: static !important;
+	top: auto !important;
+	right: auto !important;
+	bottom: auto !important;
+	left: auto !important;
+	margin: 0 0 10px 0 !important;
+	padding: 8px !important;
+	float: right !important;
+	clear:both !important;
+	border-radius: 13px !important;
+	border: 1px solid #bbb !important;
+/* 	box-shadow: 0 0 3px 1px #EEE !important; */
+	box-shadow: 3px 3px 1px 1px #595959 !important;
+	z-index: 2000000002 !important;
+	-moz-binding: 
+		url(chrome://firetv-ui/content/bindings/bindings.xml#firetv-widget)
+		!important; 
+	-moz-user-select:  -moz-none !important;
+	text-shadow: #ACACAC 1px 1px 1px !important;
+	visibility: visible !important;
+	
+}
+.firetv-widget * {
+	color: #FAFAFA !important;
+	font-family: sans-serif !important;
+	font-size: 11px !important;
+	position: static !important;
+	overflow: visible !important;
+	opacity: 1 !important;
+	background-color: transparent !important;
+}
+.firetv-widget-title {
+	padding:5px !important;
+	text-align: center !important;
+	border-top-left-radius: 5px !important;
+	border-top-right-radius: 5px !important;
+	border-bottom: 1px solid #bbb !important;
+/* 	background-image: linear-gradient(rgba(255, 255, 255, 0.5), transparent) !important; */
+}
+
+.firetv-widget-content {
+	padding:0 10px 10px 10px !important;
+}
+
+.firetv-widget-section {
+/* 	margin: 10px 0 20px 0 !important; */
+	padding: 10px 0 13px 0 !important;
+	margin: 0 0 7px 0 !important;
+	text-transform: capitalize !important;
+	font-variant: small-caps !important;
+	border-bottom: 2px solid rgba(250, 250, 250, 0.1) !important;
+}
+
+.firetv-widget label.firetv-widget-label {
+	float: left !important;
+	width: 30px !important;;
+	text-align: right !important;
+	padding-right:10px !important;
+	white-space: nowrap !important;
+	position: relative !important;
+	top: 2px !important;
+}
+.firetv-widget-formsection {
+	clear: both !important;
+	margin-bottom:5px !important;
+}
+.firetv-widget-forminput {
+/* 	color: #ACACAC !important; */
+	color: white !important;
+	margin: auto !important;
+	width:250px !important;
+	
+	font-size: 11px !important;
+	text-align: left !important;
+	font-weight: normal !important;
+	border: 1px solid rgba(250, 250, 250, 0.1) !important;
+	background-color: rgba(40, 40, 40, 0.3) !important;
+	background-image: none !important;
+	box-shadow: #FAFAFA 0px 0px 2px !important;
+	padding: 2px 5px !important;
+	-moz-user-select: text !important;
+	pointer-events: auto !important;
+}
+
+.firetv-widget-formcheckbox {
+/* 	color: #ACACAC !important; */
+	color: white !important;
+	margin: auto !important;
+	font-size: 11px !important;
+	text-align: left !important;
+	font-weight: normal !important;
+	border: 1px solid rgba(250, 250, 250, 0.1) !important;
+	background-color: rgba(40, 40, 40, 0.3) !important;
+	background-image: none !important;
+	box-shadow: #FAFAFA 0px 0px 2px !important;
+	padding: 2px 5px !important;
+	-moz-user-select: text !important;
+	position: relative !important;
+	top:3px !important;
+	pointer-events: auto !important;
+}
+
+
+.firetv-widget-forminput::-moz-placeholder {
+	font-style: italic !important;
+}
+
+.firetv-widget-forminput::-moz-selection { color: #FAFAFA !important;  background: #546C81 !important; }
+
+.firetv-widget-forminput:focus {
+	box-shadow: 0px 0px 10px #FAFAFA !important;
+}
+
+.firetv-widget-formbutton {
+	-moz-appearance: none !important;
+	height: 20px !important;
+	display: inline-block !important;
+	border: 1px solid #bbb !important;
+	padding: 0px 7px 7px 7px !important;
+	cursor: pointer !important;
+	outline: none !important; 
+	line-height: 15px !important;
+	vertical-align: middle !important;
+	color: rgb(255,255,255) !important;
+	background: rgba(248,248,248,0.1) !important;
+	border-radius: 6px !important;
+	float:right !important;
+	position: relative !important;
+	top: -2px !important;
+	text-shadow: none !important;
+	margin: 0 0 0 10px !important;
+	pointer-events: auto !important;
+}
+
+.firetv-widget-formbutton:hover {
+	box-shadow: 0 0 3px 1px #EEE !important;
+	transition: box-shadow .3s ease-in !important;
+}
+
+html[firetv-fullscreen="false"] .firetv-widget {
+	opacity: 1 !important;
+	transition: opacity 0.6s ease-in !important;
+}
+
+html[firetv-fullscreen="true"] .firetv-widget {
+	opacity: 0 !important;
+	transition: opacity 0.6s ease-in !important;
+}

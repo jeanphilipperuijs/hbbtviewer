@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChannelConfig>
+	<ChannelList>
+		<!-- channelType 0 pour TV, idType 12 pour DVB-T -->
+
+		<Channel ccid="ccid:1" channelType="0" idType="12">
+			<ONID>8442</ONID>
+			<TSID>5</TSID>
+			<SID>1281</SID>
+			<Name>TF1 HD</Name>
+		</Channel>
+		<Channel ccid="ccid:2" channelType="0" idType="12">
+			<ONID>8442</ONID>
+			<TSID>5</TSID>
+			<SID>1282</SID>
+			<Name>France 2 HD</Name>
+		</Channel>
+		<Channel ccid="ccid:3" channelType="0" idType="12">
+			<ONID>8442</ONID>
+			<TSID>1</TSID>
+			<SID>275</SID>
+			<Name>France 3</Name>
+		</Channel>
+		<Channel ccid="ccid:4" channelType="0" idType="12">
+			<ONID>8442</ONID>
+			<TSID>3</TSID>
+			<SID>769</SID>
+			<Name>Canal +</Name>
+		</Channel>
+		<Channel ccid="ccid:5" channelType="0" idType="12">
+			<ONID>8442</ONID>
+			<TSID>1</TSID>
+			<SID>260</SID>
+			<Name>France 5</Name>
+		</Channel>		
+		<Channel ccid="ccid:6" channelType="0" idType="12">
+			<ONID>8442</ONID>
+			<TSID>5</TSID>
+			<SID>1283</SID>
+			<Name>M6HD</Name>
+		</Channel>
+		<Channel ccid="ccid:7" channelType="0" idType="12">
+			<ONID>8442</ONID>
+			<TSID>4</TSID>
+			<SID>1031</SID>
+			<Name>ARTE HD</Name>
+		</Channel>
+		<Channel ccid="ccid:8" channelType="0" idType="12">
+			<ONID>8442</ONID>
+			<TSID>2</TSID>
+			<SID>513</SID>
+			<Name>D8</Name>
+		</Channel>
+		<Channel ccid="ccid:9" channelType="0" idType="12">
+			<ONID>8442</ONID>
+			<TSID>4</TSID>
+			<SID>1026</SID>
+			<Name>W9</Name>
+		</Channel>
+		<Channel ccid="ccid:10" channelType="0" idType="12">
+			<ONID>8442</ONID>
+			<TSID>6</TSID>
+			<SID>1542</SID>
+			<Name>TMC</Name>
+		</Channel>
+		<Channel ccid="ccid:11" channelType="0" idType="12">
+			<ONID>8442</ONID>
+			<TSID>4</TSID>
+			<SID>1027</SID>
+			<Name>NT1</Name>
+		</Channel>
+		<Channel ccid="ccid:12" channelType="0" idType="12">
+			<ONID>8442</ONID>
+			<TSID>6</TSID>
+			<SID>1538</SID>
+			<Name>NRJ12</Name>
+		</Channel>
+		<Channel ccid="ccid:13" channelType="0" idType="12">
+			<ONID>8442</ONID>
+			<TSID>1</TSID>
+			<SID>262</SID>
+			<Name>LCP</Name>
+		</Channel>
+		<Channel ccid="ccid:14" channelType="0" idType="12">
+			<ONID>8442</ONID>
+			<TSID>2</TSID>
+			<SID>519</SID>
+			<Name>France 4</Name>
+		</Channel>
+		<Channel ccid="ccid:15" channelType="0" idType="12">
+			<ONID>8442</ONID>
+			<TSID>2</TSID>
+			<SID>515</SID>
+			<Name>BFM TV</Name>
+		</Channel>
+		<Channel ccid="ccid:16" channelType="0" idType="12">
+			<ONID>8442</ONID>
+			<TSID>2</TSID>
+			<SID>516</SID>
+			<Name>i&gt;Télé</Name>
+		</Channel>
+		<Channel ccid="ccid:17" channelType="0" idType="12">
+			<ONID>8442</ONID>
+			<TSID>2</TSID>
+			<SID>517</SID>
+			<Name>D17</Name>
+		</Channel>
+		<Channel ccid="ccid:18" channelType="0" idType="12">
+			<ONID>8442</ONID>
+			<TSID>2</TSID>
+			<SID>518</SID>
+			<Name>Gulli</Name>
+		</Channel>
+		<Channel ccid="ccid:19" channelType="0" idType="12">
+			<ONID>8442</ONID>
+			<TSID>1</TSID>
+			<SID>261</SID>
+			<Name>France Ô</Name>
+		</Channel>
+		<Channel ccid="ccid:30" channelType="0" idType="12">
+			<ONID>8442</ONID>
+			<TSID>3</TSID>
+			<SID>774</SID>
+			<Name>TPS Star</Name>
+		</Channel>
+		<Channel ccid="ccid:31" channelType="0" idType="12">
+			<ONID>8442</ONID>
+			<TSID>4</TSID>
+			<SID>1028</SID>
+			<Name>PARIS PREMIERE</Name>
+		</Channel>
+		<Channel ccid="ccid:32" channelType="0" idType="12">
+			<ONID>8442</ONID>
+			<TSID>3</TSID>
+			<SID>771</SID>
+			<Name>C+ Sport</Name>
+		</Channel>
+		<Channel ccid="ccid:33" channelType="0" idType="12">
+			<ONID>8442</ONID>
+			<TSID>3</TSID>
+			<SID>770</SID>
+			<Name>C+ Cinéma</Name>
+		</Channel>
+		<Channel ccid="ccid:35" channelType="0" idType="12">
+			<ONID>8442</ONID>
+			<TSID>3</TSID>
+			<SID>772</SID>
+			<Name>Planète</Name>
+		</Channel>
+		<Channel ccid="ccid:36" channelType="0" idType="12">
+			<ONID>8442</ONID>
+			<TSID>6</TSID>
+			<SID>1541</SID>
+			<Name>TF6</Name>
+		</Channel>
+		<Channel ccid="ccid:37" channelType="0" idType="12">
+			<ONID>8442</ONID>
+			<TSID>6</TSID>
+			<SID>773</SID>
+			<Name>CFoot ?</Name>
+		</Channel>
+		<Channel ccid="ccid:38" channelType="0" idType="12">
+			<ONID>8442</ONID>
+			<TSID>6</TSID>
+			<SID>1539</SID>
+			<Name>LCI</Name>
+		</Channel>
+		<Channel ccid="ccid:39" channelType="0" idType="12">
+			<ONID>8442</ONID>
+			<TSID>6</TSID>
+			<SID>1540</SID>
+			<Name>Eurosport</Name>
+		</Channel>
+		<Channel ccid="ccid:51" channelType="0" idType="12">
+			<ONID>8442</ONID>
+			<TSID>6</TSID>
+			<SID>1537</SID>
+			<Name>TF1</Name>
+		</Channel>
+		<Channel ccid="ccid:52" channelType="0" idType="12">
+			<ONID>8442</ONID>
+			<TSID>1</TSID>
+			<SID>257</SID>
+			<Name>France 2</Name>
+		</Channel>
+		<Channel ccid="ccid:56" channelType="0" idType="12">
+			<ONID>8442</ONID>
+			<TSID>4</TSID>
+			<SID>1025</SID>
+			<Name>M6</Name>
+		</Channel>
+		<Channel ccid="ccid:57" channelType="0" idType="12">
+			<ONID>8442</ONID>
+			<TSID>6</TSID>
+			<SID>1543</SID>
+			<Name>ARTE</Name>
+		</Channel>
+		<Channel ccid="ccid:800" channelType="0" idType="12">
+			<ONID>8442</ONID>
+			<TSID>1</TSID>
+			<SID>368</SID>
+			<Name>NORMANDIE TV</Name>
+		</Channel>
+		<Channel ccid="ccid:801" channelType="0" idType="12">
+			<ONID>8442</ONID>
+			<TSID>1</TSID>
+			<SID>511</SID>
+			<Name>ATH</Name>
+		</Channel>
+	</ChannelList>
+</ChannelConfig>

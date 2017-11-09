@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+	  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	version="1.1" width="50" height="50">
+	<defs>
+		<pattern id="BackgroundPattern" x="0" y="0" width="40" height="40"
+			patternUnits="userSpaceOnUse">
+			<rect x="0" y="0" width="40" height="40" fill="#3B3E40" stroke="none" />
+			<path d="M 0 20 L 0 40 L 40 0 L 20 0 z" fill="#343739" stroke="none"
+				stroke-width="0" />
+			<path d="M 20 40 L 40 20 L 40 40 z" fill="#343739" stroke="none"
+				stroke-width="0" />
+		</pattern>
+		<pattern id="BackgroundReversePattern" x="0" y="0" width="40"
+			height="40" patternUnits="userSpaceOnUse">
+			<rect x="0" y="0" width="40" height="40" fill="#3B3E40" stroke="none" />
+			<path d="M 0 0 L 20 0 L 40 20 L 40 40 z" fill="#343739" stroke="none"
+				stroke-width="0" />
+			<path d="M 0 20 L 20 40 L 0 40 z" fill="#343739" stroke="none"
+				stroke-width="0" />
+		</pattern>
+	</defs>
+	<rect x="0" y="0" width="50" height="50" fill="url(#BackgroundPattern)"
+		 fill-opacity="0.8" stroke="none" stroke-width="0" rx="10" ry="10"/>
+	<g>
+		<svg width="50" height="60" preserveAspectRatio="none">
+			<path d="M 5 25 L 5 40 L 45 40 L 45 25 L 40 25 L 40 35 L 10 35 L 10 25 z" fill="#F0F0F0" fill-opacity="0.5" stroke="none"
+				stroke-width="0" />
+		</svg>
+		
+		<!--svg width="50" height="60" preserveAspectRatio="none">
+			<foreignObject y="0" x="0" width="50" height="60">
+				<body xmlns="http://www.w3.org/1999/xhtml" style="position:absolute; width:50px;height:50px; background-color:transparent;padding:0; margin: 0" >
+					<div style="position:absolute; width:50px;height:50px;text-align:center; font-family: sans-serif; font-weight:bold; font-size:27px; vertical-align: middle; color: rgba(240,240,240,0.5); line-height:50px;">
+						SPACE
+					</div>
+				</body>
+			</foreignObject>
+		</svg-->
+	</g>
+</svg>

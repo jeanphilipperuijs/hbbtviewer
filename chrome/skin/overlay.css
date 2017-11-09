@@ -1,0 +1,89 @@
+/* See license.txt for terms of usage */
+
+#firetv-button {
+    list-style-image: url(chrome://firetv-images/content/firetv-on.png);
+}
+
+#firetv-button[firetv-disabled=true], #firetv-button[disabled=true] {
+    list-style-image: url(chrome://firetv-images/content/firetv-off.png);
+}
+
+#firetvActivationToggleButtonLabel{
+	color: #888888;
+	font-style:italic;
+	margin:0; padding:0;
+}
+
+#firetvChannelListSwitchNeedReload {
+	color: #888888;
+	font-style:italic;
+}
+
+radio {
+	list-style-image: none;
+}
+
+radio .radio-label-box {
+	display:none;
+}
+
+.separator {
+	-moz-appearance: none;
+	margin: 3px 1px 4px 1px !important;
+	
+	border-top: 1px solid ThreeDShadow;
+  	border-bottom: 1px solid ThreeDHighlight;
+}
+
+.firetv-button-link {
+	-moz-appearance : none;
+	list-style-image: none;
+	border: none;
+	padding: 0;
+	margin: 0;
+	background-color: transparent;
+	color: #3386D5;
+	border: 1px solid transparent;
+	border-radius : 3px;
+	min-width:0;
+}
+
+.firetv-button-link:hover{
+	cursor: pointer;
+	color: #3DA1FF;
+	text-decoration: underline;
+	/*border: 1px solid #3386D5; */
+}
+
+.firetv-button-link[disabled=true],.firetv-button-link[disabled=true]:hover{
+	color:inherit;
+	text-decoration: none;
+	cursor: default;
+}
+.firetv-custom-button {
+	list-style-image: none;
+}
+
+.firetv-custom-button {
+	-moz-appearance : none;
+	list-style-image: none;
+	border: 1px solid #9EABBB;
+	padding: 0px 3px;
+	margin: 2px 0 0 0 ;
+	color: #444444;
+	background-image: linear-gradient(#FCFCFD, #F4F5F5);
+	border-radius : 3px;
+	cursor: pointer;
+}
+
+.firetv-custom-button:hover{
+	background-image: linear-gradient(#F4F5F5, #FCFCFD);
+}
+
+#firetvTraceConsoleAlwaysOpenCheckbox {
+	list-style-image: none;
+}
+
+#firetvDisableProfileCacheCheckbox {
+	list-style-image: none;
+}

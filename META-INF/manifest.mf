@@ -1,0 +1,512 @@
+Manifest-Version: 1.0
+
+Name: install.rdf
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: uHC3j0CeF/HiW0U9XS3JmQ==
+SHA1-Digest: OP3OmyuwZOgKibAxEXVJxyaKZcs=
+
+Name: chrome.manifest
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: wkvIBl7ZoWZA3slDzKBa+Q==
+SHA1-Digest: eUvxQrGtLZRrKt3KOAhu04lbsTw=
+
+Name: licence.txt
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: QcdQIW1WhcP4mtbWZfYC5w==
+SHA1-Digest: GvXXqJF2JwlrqVzYxd3N3eYwqqI=
+
+Name: chrome/components/base-channel.jsm
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: D2UiuPKlNyRyN56bWXixNA==
+SHA1-Digest: oHo2WHbrO6QKVyiErKb8mRt4eSo=
+
+Name: chrome/components/dvb-channel.jsm
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 3TOstoL/3bETeGvA5p7akg==
+SHA1-Digest: 28092LI3aCjf58cgGzNdo2qYgPA=
+
+Name: chrome/components/dvbprotocol.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: z6XXkhXIQ9/TJ0zsSl4IVw==
+SHA1-Digest: pTkWbptWdT9uRmoXU0tJM1J/3mk=
+
+Name: chrome/components/firetv-channel.jsm
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: uyNhP+yvp04UMGnBqa1Bgg==
+SHA1-Digest: 55b/XbEjkGG5mWqoLH3fQiBgfSo=
+
+Name: chrome/components/firetvprotocol.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: ShlFaG2yC5asGmG9dJmNtA==
+SHA1-Digest: DvoRvvmodKw2C1oYtBlM5FUz/ow=
+
+Name: chrome/components/hbbtv-streamconverter.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: eK1gg/Pi6XnqOEk0q67DDA==
+SHA1-Digest: 1tYxh6C4Wyt56MWEO94TG/UxuqI=
+
+Name: chrome/components/http-channel.jsm
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 5CK8kmXHlDAZuB2dYw7h0Q==
+SHA1-Digest: WkYayz/NfVYm82AuId1MwAvZjdM=
+
+Name: chrome/components/tv-channel.jsm
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: IEj69MesFSDHoPXiWBDLVA==
+SHA1-Digest: 3f3Y+2JAxKlJlJ10Rs54K9DupbQ=
+
+Name: chrome/components/tvprotocol.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: pe/dNn7lkgJ1h8zqoJZ89g==
+SHA1-Digest: sh0SOO9pNpf9FP76E9RYWd6mW/I=
+
+Name: chrome/content/firebug-overlay.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: F4/RvIULI/qdAqaQVruyWw==
+SHA1-Digest: /ZcW38Hs0d1SZjkK6KKzlNuUnc8=
+
+Name: chrome/content/firebug-overlay.xul
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: qjeVJiTIsCQRFENSLvJHlw==
+SHA1-Digest: Jl8TBjeIwuxs48oIU1tHeGvtDNs=
+
+Name: chrome/content/overlay.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: xGpjIaC20VcA26EEP9iHJA==
+SHA1-Digest: e4bozyiALWfYypIpVhbloliKviE=
+
+Name: chrome/content/overlay.xul
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: HWKJ3biBbVnUUZeehdAOKA==
+SHA1-Digest: jE+knBA7oSzJmNIVk0p0EQ9iI3k=
+
+Name: chrome/content/firetv/firetv-plugin.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 1r4BdHEW172bCe4W1R59Pw==
+SHA1-Digest: P+rPN0No/O6mnUk1laRoK5CIue4=
+
+Name: chrome/content/firetv/ftv-bridge.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: ELov5mE9uGiIRej6ny88RA==
+SHA1-Digest: jGq4mgxzwvtkrx+GezhaIFyB0JY=
+
+Name: chrome/content/firetv/ftv-broadcast.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 1PHoHETqipLhuof49RTftQ==
+SHA1-Digest: 1W7UgbhC6e8PI88ei+MdH933Ln4=
+
+Name: chrome/content/firetv/ftv-config.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: tSGBinmdHbxsA/M2jlA+5w==
+SHA1-Digest: HXJS7LLCe4tolhuG7qsE4rQPr3Q=
+
+Name: chrome/content/firetv/ftv-constants.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: rycHrVwhBlb1TQc9qTXmYQ==
+SHA1-Digest: WSkCYpeYNsODbj+r+zhAwp4adEg=
+
+Name: chrome/content/firetv/ftv-cssutils.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: Kxk6id6AF/T93pd68ty2eQ==
+SHA1-Digest: 2n00t0NtlXaZjmQ+q088A4LfaVc=
+
+Name: chrome/content/firetv/ftv-fileutils.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: B80pQ8q432WFN3SDGSaK3w==
+SHA1-Digest: mdhwL1qlWSidGt2exi9Y+Hhxd00=
+
+Name: chrome/content/firetv/ftv-firebug.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: r497qIZojQj+IdWr/d+RDQ==
+SHA1-Digest: 5C9pMe0OINpk+6OvtXLb/FgZkiI=
+
+Name: chrome/content/firetv/ftv-httpmonitor.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: O25s3GFXbdDlL4cL4k8SLQ==
+SHA1-Digest: bjtKdaFXaK9MucPn5WiLVsgLjxs=
+
+Name: chrome/content/firetv/ftv-messages.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: maab9k9RFuodFbT0IIIBkQ==
+SHA1-Digest: QJwckdtG7xTCItIMKR4b7/EhYdU=
+
+Name: chrome/content/firetv/ftv-mp4utils.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: Eom+HSNZAxQsa1SXz7OwcA==
+SHA1-Digest: nVxWQyBYXaevI+6MYbslg0Sextk=
+
+Name: chrome/content/firetv/ftv-preferences.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: K8XjBwKzQEVeQq4QKghvXw==
+SHA1-Digest: NElMDqbT00JGdKzKT7yXrWvCa7o=
+
+Name: chrome/content/firetv/ftv-profiles.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: lk7bY4+HWqLNwoPrgvThMQ==
+SHA1-Digest: K7PCqiVkpLTUtD8ilJ21D2XhWvg=
+
+Name: chrome/content/firetv/ftv-responsefilter.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: hFxpOnhq2qNjbCvsXMenDg==
+SHA1-Digest: PjJkZgcc7oVcAuSgHYGp56jn41U=
+
+Name: chrome/content/firetv/ftv-svg.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 5Nr2lxNLK7dsCqzviYpP0w==
+SHA1-Digest: JwHZxAStGmVx3yQMhHrVf1ZLx3o=
+
+Name: chrome/content/firetv/ftv-tabmanager.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: uw6VFydJRrKpOznGoQXFMg==
+SHA1-Digest: GicQh3i1SoKQmUrTi3qe/ih04Ck=
+
+Name: chrome/content/firetv/ftv-ui.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: rP1zz2TZTsNA3fIyI5a+lw==
+SHA1-Digest: IX9bwXHCYMPTFYfG6E+V9a75m/s=
+
+Name: chrome/content/firetv/ftv-utils.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: fz1arc5u/SV4KQSyg7yZ7A==
+SHA1-Digest: PgWz0q3RHgji3/asQ4xgqWqQxPQ=
+
+Name: chrome/locale/en-US/messages.properties
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: ieZ+x2zYW34a2fEnc98qhg==
+SHA1-Digest: 3N+1NH/SXpz6pi1Ol7ftAFB2Zxk=
+
+Name: chrome/locale/fr-FR/messages.properties
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: b/saHhx4hSNYxtbVHK4kuQ==
+SHA1-Digest: 4bVSAWT3W/d54zJokSDA32lPw8M=
+
+Name: chrome/profiles/common/font-loader.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: JdE97WwFb8/t0nfumJV4AQ==
+SHA1-Digest: bKZJK5bctnAbAFrepa2IPJP3QRA=
+
+Name: chrome/profiles/common/object-helper.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: ko9kexALBiL7abZBxSC7VQ==
+SHA1-Digest: 4cmiQixYXwbBK3TXoYeBofnke+s=
+
+Name: chrome/profiles/common/universal-remote.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: ndB/5hJsXlcdyTKDMZj2vQ==
+SHA1-Digest: noXXvydo532PHp6rWMAUyeD8R1s=
+
+Name: chrome/profiles/common/user-agent.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: r0BjKjQ+TOfwCYGRknypuA==
+SHA1-Digest: xatbAqXY14P3BZBWw1/wX4ys1Wk=
+
+Name: chrome/profiles/common/window.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 6+L4iN06MeOiUlLkSWL5Kw==
+SHA1-Digest: dL5GHCuPQMK0toSQTn2g5ObA4DM=
+
+Name: chrome/profiles/common/css/extended-css.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: nqqrFSLGhgxvAPy+Pqj4jQ==
+SHA1-Digest: mJV2lB0ZNqT0LyIQu4kNEp/52L0=
+
+Name: chrome/profiles/common/css/hooks/background-repeat.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 26lDFdwn081qIEL0zIIeYw==
+SHA1-Digest: P/iUI7Pxx3bgwR/pMksCloyA3ek=
+
+Name: chrome/profiles/common/css/hooks/css-nav.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: JlmqJb/2GXl3t0kmikfTgQ==
+SHA1-Digest: oS8UkBE5qrhat9NppHrxeMBXh+k=
+
+Name: chrome/profiles/common/css/hooks/transparency.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: DpErOOLABmUJcpEVr2GUbA==
+SHA1-Digest: pj+pymPP4gZdah97Fl5MvwdxIok=
+
+Name: chrome/profiles/common/mediaplayer/av-player-html.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: On1y9s2T0QrJvcaukgUfFg==
+SHA1-Digest: OEiREUNBTdsEawNikc7HP7mde5w=
+
+Name: chrome/profiles/common/mediaplayer/av-player-proxy.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: sK2Bp4x4wWjIs2NMjA9ERQ==
+SHA1-Digest: How4Wf7NGmf5HUmi580Y3nR0KUk=
+
+Name: chrome/profiles/common/mediaplayer/av-player-svg.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: eGOuEw+Mw9x/UbNrASTEpQ==
+SHA1-Digest: +qqAsbKufQ8F7LEyC/sFPVlARuE=
+
+Name: chrome/profiles/common/mediaplayer/av-player-vlc.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: lpAHQ/kVXnElwhazPCiyfA==
+SHA1-Digest: H9LhBOoZlUP2Zy36Ez/ErABbJtQ=
+
+Name: chrome/profiles/common/mediaplayer/svg-api.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: J2Ocaq9p1e4nyI2jhjAknQ==
+SHA1-Digest: RiHFxWffOoWWdwQAPRUQ+m9c+h4=
+
+Name: chrome/profiles/common/tvplayer/broadcast-player-html.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: D0D6a4QHtFhbWoGuz5p27Q==
+SHA1-Digest: dseprbqhteB3HoeHAkeD0m3F1PA=
+
+Name: chrome/profiles/common/tvplayer/broadcast-player-object.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: k6zCnKR/9Zarq8/k2NMXOg==
+SHA1-Digest: 0MDRkElyWRX4mtPO8968a41OPN0=
+
+Name: chrome/profiles/common/tvplayer/broadcast-player-proxy.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: kZzIGGbd1l1UYDfFpPcP5Q==
+SHA1-Digest: R7H9FsfUfN09ZTA6OUbq51To/TA=
+
+Name: chrome/profiles/common/tvplayer/broadcast-player-svg.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: uU6ZRxQCis0eS1ZJ92vkJQ==
+SHA1-Digest: o4XleqtnWd25TEL5qDOvW4dYPxo=
+
+Name: chrome/profiles/common/tvplayer/broadcast-player-vlc.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: C11MeYPt0ZmekV+PrnvjlA==
+SHA1-Digest: Lb6va8rh4aY1J9n3VWgoVpUrDOU=
+
+Name: chrome/profiles/hbbtv/bindings.xml
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: A4ozOEQwMfTM6YynsFFcVg==
+SHA1-Digest: XQfWBvqc9/MqaOECArfUemKcn/A=
+
+Name: chrome/profiles/hbbtv/definition.json
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: Je7QVM0AtCg2SJUk9GrW/g==
+SHA1-Digest: Tmj+NfKzQbFs79vDf8axMaxZprs=
+
+Name: chrome/profiles/hbbtv/hbbtv-logo.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: noB/QnAIDXseRj7j0StWSg==
+SHA1-Digest: Fbdh9qWa8qsmI8wthj77+TPk0Fg=
+
+Name: chrome/profiles/hbbtv/profile.css
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 0ghNZVwEf899QQ4Pj6a4eA==
+SHA1-Digest: 03FVWydJbShR/bzR1YGzCJfrIXc=
+
+Name: chrome/profiles/hbbtv/remote.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: FYx/6/mqgqIBiKVj4scuFw==
+SHA1-Digest: acGoeRU9p9ppwEJ0uwWj75oypx4=
+
+Name: chrome/profiles/hbbtv/env/av.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: Krc3zVZzn8SPtp55/W0bjQ==
+SHA1-Digest: 2xpC9UfmysYEGBRVOTVdTbphB0w=
+
+Name: chrome/profiles/hbbtv/env/broadcast.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 01VZ6qA+Fo0X/FqUTnZILA==
+SHA1-Digest: DbjkVWougp9WpENiA8TZ5+7WgrA=
+
+Name: chrome/profiles/hbbtv/env/debug.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: TIin0wdQzrvXc+b9eVkT/w==
+SHA1-Digest: w/fnhu1+bh8seGPtwaZu/rzLKDo=
+
+Name: chrome/profiles/hbbtv/env/events.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: ktlbOPkwJ+29Ovwmnq6nBQ==
+SHA1-Digest: VIh2hGVeFwx3lKoIrEap1koXvwQ=
+
+Name: chrome/profiles/hbbtv/env/keys.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 6Rb98kBsbdVoSJCPE70MLg==
+SHA1-Digest: 4u8EtPueiJ33H1OfBv3ULJgSOxU=
+
+Name: chrome/profiles/hbbtv/env/oipf.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: qa9W+Ij1MvJfEoUgQw1tMA==
+SHA1-Digest: 8T8RpuJrZA0yYmL08tAtqVgJ5oY=
+
+Name: chrome/resources/channels/ChannelList-fr.xml
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: hWprblX+D+NaKiJ2OKaiyA==
+SHA1-Digest: 38ar+TuvE7s1EnGyiEx7LuOTzb8=
+
+Name: chrome/resources/channels/ChannelList.xsd
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: EFs/RV+N5fNlfUCeKIP7kA==
+SHA1-Digest: +L9+esqAlUgJ252aT/07p+up69M=
+
+Name: chrome/resources/fonts/Brie/brie-light.otf
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: Sxefl6buuOiq1wT8OEhjow==
+SHA1-Digest: GPjZbPVefjR020TIqFEit+yJpvo=
+
+Name: chrome/resources/fonts/Brie/brie-light.ttf
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: vg5thF5vZADxlWNC72ZTOA==
+SHA1-Digest: M+GKvftSQ6LwXQJoH1QwGYQKPts=
+
+Name: chrome/resources/fonts/Brie/brie-medium.otf
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: nyYKH8RgclMudLyCYtxqgw==
+SHA1-Digest: dKvBNrXel1xC6OERXG+t0GFDQ3w=
+
+Name: chrome/resources/fonts/Brie/brie-medium.ttf
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: SX1dhFFBDV7Q+ukElUi4Cw==
+SHA1-Digest: xvzJgKbJqoz6ulBfigMqwVW7+L4=
+
+Name: chrome/resources/fonts/LetterGothic12Pitch/lettergothic.ttf
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: jVERZFOH/IwYJK5+gzZJUQ==
+SHA1-Digest: nSZghQyIueVIYF3WADkdvNg0YXk=
+
+Name: chrome/resources/fonts/Tiresias/tiresias-screenfont.ttf
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: HLBf+9lsJSLvWZpGzbrtjw==
+SHA1-Digest: wyVveIKyBhhyp3TkY905bxdxGZc=
+
+Name: chrome/resources/images/arrow-down.gif
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: +14FduD1fbJsjbW5dgWRUg==
+SHA1-Digest: doQ5tA/5UJ60BENpbrFcAoebZVs=
+
+Name: chrome/resources/images/background.svg
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: QcDUGa3zMtHAKAh8atF5Ig==
+SHA1-Digest: GlrinTd/Vlex3b5xdtLxIkW/yXM=
+
+Name: chrome/resources/images/firetv-off.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: BO1sRsv2R8qVZa5LSesF8A==
+SHA1-Digest: 8XDCKT7oSf/J3NuoA3jBiWDU7sM=
+
+Name: chrome/resources/images/firetv-on.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: KHw7AAdYCx7/vviA7RmSCw==
+SHA1-Digest: PigZ2zaQcIUsEWa9sgnNL1P6h68=
+
+Name: chrome/resources/images/newtab.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 5/LOvYuo6DFZoVXOpxpGTA==
+SHA1-Digest: 8nCJt4pBhspBSOZe758YM/7m61s=
+
+Name: chrome/resources/images/space-key.svg
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: VEEU9kTDP3FttXvEcCPcAQ==
+SHA1-Digest: I8UMRtKTwfqI9hajXV5U1qZ/L9k=
+
+Name: chrome/skin/firetv-128.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: ZlvgKPkxxVWQ/7RF37diTg==
+SHA1-Digest: v9ObOayx6eml+GtBOM8/yC4vNOA=
+
+Name: chrome/skin/firetv-16.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: KHw7AAdYCx7/vviA7RmSCw==
+SHA1-Digest: PigZ2zaQcIUsEWa9sgnNL1P6h68=
+
+Name: chrome/skin/firetv-32.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: XIIh86nlGUiGummteXP9qw==
+SHA1-Digest: f4naz7ybukJgesvRKKNv+E009Ps=
+
+Name: chrome/skin/firetv-48.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: zBJHOPlJPdF5rtYdVgXU9w==
+SHA1-Digest: hoEDW1hI41GePVWTjRTHRZ3K4lk=
+
+Name: chrome/skin/firetv-64.png
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 0wdDjPFIv4D3FRUpdlUECQ==
+SHA1-Digest: g8zaObGUujeHw/eLbsY3/zXyOKQ=
+
+Name: chrome/skin/overlay.css
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: ZnOGIFlfH7QDsEL0JdAtGg==
+SHA1-Digest: l4yD0UQShRf63qiACpAwQ2XMtPg=
+
+Name: chrome/ui/bindings/bindings.xml
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: jz43TUJKA86Sg8NJBUANAA==
+SHA1-Digest: HvzwaGmOIQidMD+tm+0u+AFr9t0=
+
+Name: chrome/ui/css/additional-infos.css
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 75qBAcygM756Hde3N83Uxw==
+SHA1-Digest: OumnCP+pdD+gDjXpwWNuSF7uBpU=
+
+Name: chrome/ui/css/dropdown-menu.css
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: sG0ADQcETCUTUbvFoghSPg==
+SHA1-Digest: oGtpO1Cw1Zq/RLNW26H/P10CPE0=
+
+Name: chrome/ui/css/image-button.css
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: KUBX8OmzHXfDJJwgtQZosQ==
+SHA1-Digest: jQDcBsvnwrOLRafZ15KrTa4h3Yo=
+
+Name: chrome/ui/css/ime-hint.css
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: hZ08TeYTqa4uzjwSnNnihg==
+SHA1-Digest: lcicBEoluzIUdSR9SotXCXCdmxA=
+
+Name: chrome/ui/css/ime.css
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: FKPvJn5lQo0E9jWIu9pPpA==
+SHA1-Digest: UQPPsldti7piXLinfkkOKOc+TVw=
+
+Name: chrome/ui/css/menu-bar.css
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: sXgz8o5RpqiVrL497SynaA==
+SHA1-Digest: 3ec4Q+EaqN52KQuCbyxM0Jus/s4=
+
+Name: chrome/ui/css/osd.css
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: ISZQs9W5Z7ApTrZE0n/D/g==
+SHA1-Digest: i0GFtxiEOvdI/KPsOTR9DsgDnSg=
+
+Name: chrome/ui/css/other-infos.css
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: fwZAzjkPKAluvooU9XKg7g==
+SHA1-Digest: E0BQN278QdpDd6Lwt1NRRdbixUY=
+
+Name: chrome/ui/css/popup.css
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 5i65y7lgiKQplga5gTLdZQ==
+SHA1-Digest: hvm3NNseCF29UYuSZbP8/Lu86Q8=
+
+Name: chrome/ui/css/remote-control.css
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: Zw3W6AtHfDhKitqolnSLHg==
+SHA1-Digest: sYz1i6tj/WClI4syd2WPHR45e0Q=
+
+Name: chrome/ui/css/stream-infos.css
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: Jgt0BIb63EEDozPDt+zZrA==
+SHA1-Digest: BIf60G+POkSEjQdXR+5P6wzm4mQ=
+
+Name: chrome/ui/css/toggle-button.css
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: Dbl/PhzkTJXHFjFJ0aT+sw==
+SHA1-Digest: U18kFUxE/qLySJPjLt6mBqR9Fug=
+
+Name: chrome/ui/css/tv-frame-margin.css
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: rEpCH+5l2Eag5cwEu4c6bA==
+SHA1-Digest: bHAEOs0G94oHedy64y98BjwpOj4=
+
+Name: chrome/ui/css/widget.css
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: 5rcZ/bpcBIl5KmoYRsEfWg==
+SHA1-Digest: +OxWUW77ao3rHC3X+Hbu1gXg/OI=
+
+Name: defaults/preferences/prefs.js
+Digest-Algorithms: MD5 SHA1
+MD5-Digest: yO5RVbu+WD5mt+Zj+kCr2g==
+SHA1-Digest: dlEt3Fka5Vvb6dbI8CAZo9ae+aE=
+

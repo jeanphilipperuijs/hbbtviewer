@@ -1,0 +1,13 @@
+/* See license.txt for terms of usage */
+
+[anonid=firetv-ime-hint]{
+	-moz-user-select: -moz-none !important;
+	position: absolute !important;
+	display:inline-block !important;
+	z-index: 1000001 !important;
+	visibility: hidden;
+	background-image: url(chrome://firetv-images/content/space-key.svg) !important;
+	background-repeat: no-repeat !important;
+	background-position: 50% 50% !important;
+	background-size: cover !important;
+}

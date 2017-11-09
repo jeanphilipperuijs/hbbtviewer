@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- See license.txt for terms of usage  -->
+<?xml-stylesheet href="chrome://firetv/skin/overlay.css" type="text/css"?>
+<!DOCTYPE overlay>
+<overlay id="firetv-overlay"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<script type="text/javascript">
+		//<![CDATA[
+		var getFireTVPluginInstance = function(){
+			
+			const Cc = Components.classes;
+			const Ci = Components.interfaces;
+			const Cr = Components.results;
+			const Cu = Components.utils;
+			
+			var windowManager = Cc['@mozilla.org/appshell/window-mediator;1'].getService(Ci.nsIWindowMediator);
+			var prefService = Cc["@mozilla.org/preferences-service;1"].getService(
+				Ci.nsIPrefService).getBranch("extensions.firetv.");
+				
+			var enumerator = windowManager.getEnumerator(null);
+			var windows = [];
+			var res = null;
+			var win;
+			while (enumerator.hasMoreElements()) {
+				win = enumerator.getNext();
+				if (win.FireTVPlugin) {
+					res = win.FireTVPlugin;
+				}
+			}
+			if (res === null) {
+				res = {};
+				// -- init FBTrace
+				var traceConsole;
+				try {
+					Cu["import"]("resource://fbtrace/firebug-trace-service.js");
+					if (traceConsoleService) {
+						traceConsole = traceConsoleService.getTracer("extensions.firetv");
+						traceConsole.setScope(window);
+						function clearFBTraceScope() {
+							window.removeEventListener('unload', clearFBTraceScope, true);
+							traceConsole.setScope(null);
+						}
+						window.addEventListener('unload', clearFBTraceScope, true);
+						traceConsole.sysout("Tracing console initialized for: extensions.firetv");
+					}
+				} catch (exc) {
+				}
+				
+				if (!traceConsole){
+					traceConsole = {
+						mock : true,
+						dump : function() {
+						},
+						sysout : function() {
+						},
+						setScope : function() {
+						},
+						matchesNode : function() {
+						},
+						time : function() {
+						},
+						timeEnd : function() {
+						}
+					};
+				}
+				res.FBTrace = traceConsole;
+				
+				res.openTraceConsole = function(event){
+					if(event) {
+						event.preventDefault();
+						event.stopPropagation();
+					}
+					var traceConsoleAvailable = (res.FBTrace.mock !== true);
+					if(!traceConsoleAvailable){
+						return;
+					}
+					
+					var prefDomain = "extensions.firetv";
+					// -- check if not already open
+					var enumerator = windowManager.getEnumerator(null);
+					var alreadyOpen = false;
+					while (enumerator.hasMoreElements()) {
+						var win = enumerator.getNext();
+						if (win.TraceConsole && win.TraceConsole.prefDomain === prefDomain ) {
+							alreadyOpen = true;
+							win.focus();
+						}
+					}
+					
+					if(!alreadyOpen){
+						// -- open the trace console
+						var traceWindowURL = "chrome://fbtrace/content/traceConsole.xul";
+						var traceWindowArgs = { 
+			    			prefDomain: prefDomain,
+						};
+						window.openDialog(
+				            traceWindowURL,
+				            "FBTraceConsole." + traceWindowArgs.prefDomain ,
+				            "chrome,resizable,scrollbars=auto,minimizable,dialog=no",
+				            traceWindowArgs);
+				    }
+			            
+			        if(event){
+			        	var doc = event.target.ownerDocument;
+						var firetvPanel = doc.getElementById("firetv-panel");
+						firetvPanel.hidePopup();
+			        }
+				};
+				if (prefService.getBoolPref("alwaysOpenTraceConsole")){
+					res.openTraceConsole();
+				}
+			}
+			return res ;
+		}
+		
+		// init
+		FireTVPlugin = getFireTVPluginInstance();
+		//]]>
+	</script>
+
+	<script src="firetv/ftv-constants.js" />
+	<script src="firetv/ftv-messages.js" />
+	<script src="firetv/ftv-preferences.js" />
+	<script src="firetv/ftv-utils.js" />
+	<script src="firetv/ftv-fileutils.js" />
+	<script src="firetv/ftv-cssutils.js" />
+	<script src="firetv/ftv-mp4utils.js" />
+
+	<script src="firetv/ftv-config.js" />
+	<script src="firetv/ftv-broadcast.js" />
+
+	<script src="firetv/ftv-profiles.js" />
+
+	<script src="firetv/ftv-svg.js" />
+	<script src="firetv/ftv-tabmanager.js" />
+	<script src="firetv/ftv-bridge.js" />
+	<script src="firetv/ftv-responsefilter.js" />
+	<script src="firetv/ftv-httpmonitor.js" />
+	<script src="firetv/ftv-ui.js" />
+
+	<script src="firetv/firetv-plugin.js" />
+
+	<script src="overlay.js" />
+
+	<stringbundleset id="stringbundleset">
+		<stringbundle id="firetv-strings"
+			src="chrome://firetv/locale/messages.properties" />
+	</stringbundleset>
+
+	<toolbar id="nav-bar-customization-target">
+		<toolbarbutton id="firetv-button" type="menu-button" oncommand="FireTVPlugin.Config.toggleFireTVSupport(event)"
+			class="toolbarbutton-1 chromeclass-toolbar-additional">
+			<panel id="firetv-panel" type="arrow" onpopupshowing="FireTVPlugin.Config.onPopupShowing(event)" >
+				<vbox>
+					<hbox flex="1" align="center" pack="end">
+						<label id="firetvActivationToggleButtonLabel" value=""  />
+					</hbox>
+					<hbox flex="1" align="center" pack="start">
+						<image src="chrome://firetv-images/content/firetv-on.png" /><label id="firetvTitleLabel" value="" />
+						<hbox flex="2" align="center" pack="end">
+							<button id="firetvActivationToggleButtonLocation" class="firetv-button-link" label="" oncommand="FireTVPlugin.Config.toggleFireTVSupport(event)" />
+						</hbox>
+					</hbox>
+					<box class="separator" flex="1" />
+					<hbox flex="1" align="center" pack="end">
+						<label id="firetvDVBRootLabel" value="" />
+						<button id="firetvOpenDVBRootButton" class="firetv-button-link" label="" oncommand="FireTVPlugin.Config.openDVBRoot(event)" />
+					</hbox>
+					<hbox flex="1" align="center" pack="end">
+						<spacer flex="1"/><button id="firetvDVBRootButton" class="firetv-custom-button" label="" oncommand="FireTVPlugin.Config.chooseDVBRoot(event)" />
+					</hbox>
+					<box class="separator" flex="1" />
+					<hbox flex="1" align="center" pack="start">
+						<label id="firetvChannelListLabel" value="" />
+						<radiogroup orient="horizontal" aligh="center" oncommand="FireTVPlugin.Config.onChannelListCommand(event)">
+							<radio id="firetvDefaultChannelListRadio"></radio>
+							<button id="firetvDefaultChannelListButton" class="firetv-button-link" label="" />
+							<radio id="firetvCustomChannelListRadio"></radio>
+							<button id="firetvCustomChannelListButton" class="firetv-button-link" label="" />
+						</radiogroup>
+					</hbox>
+					<hbox flex="1" align="center" pack="start">
+						<label id="firetvChannelListSwitchNeedReload" value="" />
+						<hbox flex="3" align="center" pack="end">
+							<button id="firetvCustomChannelListUploadButton" class="firetv-custom-button" label="" oncommand="FireTVPlugin.Config.chooseChannelList(event)" />
+						</hbox>
+					</hbox>
+					<vbox id="firetvTraceConsoleOptions">
+						<box class="separator" flex="1" />
+						<hbox flex="1" align="center" pack="start">
+							<hbox flex="1" align="center" pack="start">
+								<button id="firetvTraceConsoleButton" class="firetv-custom-button" label="" oncommand="FireTVPlugin.openTraceConsole(event)" />
+							</hbox>
+						</hbox>
+						<hbox flex="1" align="center" pack="start">
+							<hbox flex="1" align="center" pack="start">
+								<checkbox id="firetvTraceConsoleAlwaysOpenCheckbox" label="" checked="false" oncommand="FireTVPlugin.Config.toggleTraceConsoleAlwaysOpen(event)"/>
+							</hbox>
+						</hbox>
+					</vbox>
+				</vbox>
+			</panel>
+		</toolbarbutton>
+	</toolbar>
+</overlay>
