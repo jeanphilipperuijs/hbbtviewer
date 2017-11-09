@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
   <Description about="urn:mozilla:install-manifest">
-    <em:id>dlfr-firetv-plugin@atosorigin.com</em:id>
+    <em:id>jean-philippe@ruijs.fr</em:id>
     <em:unpack>true</em:unpack>
     <em:type>2</em:type>
     <em:name>FireHbbTV</em:name>
     
-    <em:version>1.3.20</em:version>
-    <em:creator>Atos Worldline</em:creator>
+    <em:version>1.3.21</em:version>
+    <em:creator>Jean-Philpipe Ruijs</em:creator>
     
     <em:iconURL>chrome://firetv/skin/firetv-32.png</em:iconURL>
     
@@ -15,7 +15,7 @@
       <Description>
         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
         <em:minVersion>23.0</em:minVersion>
-        <em:maxVersion>39.*</em:maxVersion>
+        <em:maxVersion>*</em:maxVersion>
       </Description>
     </em:targetApplication>
     
