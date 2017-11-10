@@ -121,7 +121,7 @@ if (pageActivated) {
             removeClass(document.body, "res2160p");
             addClass(document.body, res);
             addClass(document.getElementById(keyId), "focus");
-            localStorage.setItem('hbbtv_resolution', res); // TODO: store this value in Chrome's extension
+            localStorage.setItem('hbbtv_resolution', res); // TODO: store this value in Firefox's extension
         }
 
         function generateButton(keyId, keyValue, optionClassName) {
@@ -151,17 +151,17 @@ if (pageActivated) {
         generateButton("greenkey", greenValue);
         generateButton("yellowkey", yellowValue);
         generateButton("bluekey", blueValue);
-
+/*
         // add F11 and F12 buttons ... (not clickable as the browser will handle their actions by default)
-        generateButton("f11key", null, "btleftgradient btrightgradient");
+        generateButton("f11key", null, /*"btleftgradient btrightgradient");
         generateButton("f12key", null, "btleftgradient btrightgradient");
-
+*/
         // add resizing screen buttons ...
-        generateButton("res720key");
+  /*      generateButton("res720key");
         generateButton("res1080key");
         generateButton("res1440key");
         generateButton("res2160key");
-
+*/
         var pageResolution = localStorage.getItem('hbbtv_resolution') || "res720p";
         addClass(document.body, pageResolution);
 

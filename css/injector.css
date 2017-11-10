@@ -4,7 +4,7 @@ html.tvViewer {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: gray;
+    background-color: black;
     background-image: repeating-linear-gradient(-45deg, transparent, transparent 15px, rgba(0,0,0,.5) 15px, rgba(0,0,0,.5) 30px) !important;
 }
 
@@ -12,7 +12,9 @@ html.tvViewer > body {
     position: absolute;
     width: 1280px !important;
     height: 720px !important;
-    box-shadow: 0 0 100px 50px black;
+/*    box-shadow: 0 0 77px 77px black;
+  */
+  background-color: gray;
     overflow: visible !important;
 }
 

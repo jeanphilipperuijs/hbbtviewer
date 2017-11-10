@@ -106,7 +106,7 @@
         injectedScript += (withOption ? "e.setAttribute('" + withOption + "', '" + withOption + "');" : "");
         injectedScript += "e.setAttribute('type','text/javascript');e.setAttribute('src','" + pluginPath + "');";
         injectedScript += (addedToHead ? "d.head" : "d.body");
-        injectedScript += (addedAsFirstChild ? ".insertBefore(e,d.head.firstChild)" : ".appendChild(e)");
+        injectedScript += (addedAsFirstChild ? ".insertBefore(e,d.head.firstChild)" : ".appendChild(e);");
         injectedScript += "}(document));";
         browser.tabs.executeScript(tabId, {
             code: injectedScript,
@@ -277,7 +277,7 @@
         querying.then(function (tabInfo) {
             console.warn("je suis là TAB: ", tabInfo);
             var urlFound = isUrlStored(tabInfo.url);
-
+            document.window.resizeTo(1280,760);
             chrome.browserAction.setIcon({
                 path: "./img/tv-icon128-" + (urlFound ? "on" : "off") + ".png"
             });
