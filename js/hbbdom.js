@@ -141,7 +141,7 @@ if (pageActivated) {
             }
         }
 
-        // warning: here for ARTE, we can't use the KeyEvent object but only the global VK_xx
+        // warning: for ARTE we can't use the KeyEvent object but only the global VK_xx
         window.KeyEvent = window.KeyEvent || {};
         var redValue = window.KeyEvent.VK_RED ? window.KeyEvent.VK_RED : (typeof VK_RED !== 'undefined' ? VK_RED : 403);
         var greenValue = window.KeyEvent.VK_GREEN ? window.KeyEvent.VK_GREEN : (typeof VK_GREEN !== 'undefined' ? VK_GREEN : 404);
