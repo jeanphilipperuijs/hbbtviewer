@@ -4,3 +4,7 @@ localStorage.setItem('hbbtvActive', pageNotActivated);
 
 // Just refresh the page in order to inject new CSS and JS ...
 document.location.reload();
+
+
+
+console.log(JSON.stringify(localStorage));
