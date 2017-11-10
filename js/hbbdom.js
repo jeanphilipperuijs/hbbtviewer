@@ -99,7 +99,7 @@ if (pageActivated) {
         function doKeyPress(key) {
             var event = document.createEvent('Event');
             event.keyCode = key;
-            event.initEvent('keydown');
+            event.initEvent('keydown',false,false);
             document.dispatchEvent(event);
         }
 
